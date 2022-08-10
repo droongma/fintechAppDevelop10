@@ -286,7 +286,7 @@ const SignUp = ({navigation}) => {
                         justifyContent: 'center'
                     }}
                     // onPress={() => navigation.navigate("Home")}
-                    onPress={() => navigation.navigate("Home")}
+                    onPress={() => navigation.navigate("HomeStack")}
 
                 >
                     <Text style={{ color: COLORS.white, ...FONTS.h3 }}>시작하기</Text>
