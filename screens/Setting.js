@@ -1,11 +1,12 @@
 import React from "react";
 import {
     View,
-    Text
+    Text,
+    Button
 } from "react-native";
 import { COLORS, SIZES, FONTS, icons, images } from "../constants"
 
-const Home = () => {
+const Setting = ({navigation}) => {
     return (
         <View style={{
             flexDirection: 'row',
@@ -14,9 +15,9 @@ const Home = () => {
             marginTop: SIZES.padding * 6,
             // paddingHorizontal: SIZES.padding * 2
         }}>
-            <Text>자산</Text>
+            <Button onPress={()=> {navigation.navigate("Navtest")}} title="다른 화면으로"></Button>
         </View>
     )
 }
 
-export default Home;
+export default Setting;

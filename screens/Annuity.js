@@ -5,7 +5,7 @@ import {
 } from "react-native";
 import { COLORS, SIZES, FONTS, icons, images } from "../constants"
 
-const Home = () => {
+const Annuity = () => {
     return (
         <View style={{
             flexDirection: 'row',
@@ -14,9 +14,9 @@ const Home = () => {
             marginTop: SIZES.padding * 6,
             // paddingHorizontal: SIZES.padding * 2
         }}>
-            <Text>자산</Text>
+            <Text>연금</Text>
         </View>
     )
 }
 
-export default Home;
+export default Annuity;

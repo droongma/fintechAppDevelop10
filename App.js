@@ -1,11 +1,10 @@
-import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, View } from 'react-native';
-import {FAKE_API_KEY} from '@env';
 import React from 'react';
-import { SignUp, Home, } from "./screens";
+import { SignUp, Home, Scan, Annuity, Support, Navtest, Etc } from "./screens";
 import { createStackNavigator } from "@react-navigation/stack";
 import { NavigationContainer, DefaultTheme } from '@react-navigation/native';
 import { useFonts } from 'expo-font';
+import Tabs from "./navigation/Tabs";
+import {FAKE_API_KEY} from '@env';
 
 const theme = {
   ...DefaultTheme,
@@ -17,37 +16,41 @@ const theme = {
 
 const Stack = createStackNavigator();
 
-export default function App() {
-  const [loaded] = useFonts({
-    "Roboto-Black" : require('./assets/fonts/Roboto-Black.ttf'),
-    "Roboto-Bold" : require('./assets/fonts/Roboto-Bold.ttf'),
-    "Roboto-Regular" : require('./assets/fonts/Roboto-Regular.ttf'),
-})
+const App = () => {
+    const [loaded] = useFonts({
+        "Roboto-Black" : require('./assets/fonts/Roboto-Black.ttf'),
+        "Roboto-Bold" : require('./assets/fonts/Roboto-Bold.ttf'),
+        "Roboto-Regular" : require('./assets/fonts/Roboto-Regular.ttf'),
+    })
+    
+    if(!loaded){
+      return null;
+    }
+    return (
+        <NavigationContainer theme={theme}>
+            <Stack.Navigator
+                screenOptions={{
+                    headerShown: false
+                }}
+                initialRouteName={'SignUp'} // 초기 화면
+            >
+                <Stack.Screen name="SignUp" component={SignUp} />
+                
+                <Stack.Screen name="Home" component={Tabs} /> 
 
-if(!loaded){
-  return null;
+                {/* Tabs */}
+                <Stack.Screen name="Support" component={Support} />
+
+                <Stack.Screen name="Annuity" component={Annuity} />
+
+                <Stack.Screen name="Scan" component={Scan} />
+
+                <Stack.Screen name="Etc" component={Etc} />
+
+                <Stack.Screen name="Navtest" component={Navtest} />
+            </Stack.Navigator>
+        </NavigationContainer>
+    )
 }
-return (
-    <NavigationContainer theme={theme}>
-        <Stack.Navigator
-            screenOptions={{
-                headerShown: false
-            }}
-            initialRouteName={'SignUp'} // 초기 화면
-        >
-            <Stack.Screen name="SignUp" component={SignUp} />
-            <Stack.Screen name="Home" component={Home} />
 
-        </Stack.Navigator>
-    </NavigationContainer>
-)
-}
-
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
-});
+export default App;

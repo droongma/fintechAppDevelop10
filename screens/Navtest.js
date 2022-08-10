@@ -1,11 +1,13 @@
 import React from "react";
 import {
     View,
-    Text
+    Text,
+    Button
 } from "react-native";
+
 import { COLORS, SIZES, FONTS, icons, images } from "../constants"
 
-const Home = () => {
+const Navtest = ({navigation}) => {
     return (
         <View style={{
             flexDirection: 'row',
@@ -14,9 +16,9 @@ const Home = () => {
             marginTop: SIZES.padding * 6,
             // paddingHorizontal: SIZES.padding * 2
         }}>
-            <Text>자산</Text>
+            <Button onPress={()=>{navigation.navigate("Home") }} title="원래 화면으로 돌아가기"> </Button>
         </View>
     )
 }
 
-export default Home;
+export default Navtest;
