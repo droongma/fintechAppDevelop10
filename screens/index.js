@@ -5,6 +5,7 @@ import Setting from "./Setting"
 import Annuity from "./Annuity"
 import Navtest from "./Navtest"
 import Etc from "./Etc"
+import AlarmScreen from "./AlarmScreen"
 
 export {
     Home,
@@ -14,4 +15,5 @@ export {
     Setting,
     Navtest,
     Etc,
+    AlarmScreen,
 }

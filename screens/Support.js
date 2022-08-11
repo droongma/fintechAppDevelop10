@@ -10,7 +10,6 @@ const Support = () => {
     const headerHeight = useHeaderHeight();
     return (
         <View style={{
-            flexDirection: 'row',
             justifyContent: "center",
             alignItems: "center", // 각 자식 아이템들이 가운데 높이에 위치하도록 정렬
             marginTop: headerHeight,
