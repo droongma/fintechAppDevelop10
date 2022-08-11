@@ -15,6 +15,7 @@ const Stack = createStackNavigator();
 const DrawerNavigator = ({navigation}) => {
     return (
         <Drawer.Navigator 
+            backBehavior='history' // 마지막으로 본 페이지로 돌아오게 설정
             screenOptions={{
                 headerShown: true,
                 headerTransparent: true,
@@ -22,7 +23,7 @@ const DrawerNavigator = ({navigation}) => {
                 headerRight: () => (
                     <TouchableOpacity onPress={() => {
                         // alert('알람을 클릭하였습니다!')}
-                        navigation.navigate("Alarm", { origin: 'AlarmScreen' })
+                        navigation.navigate("Alarm")
                     }}>
                         <Image  
                             source={{ uri: Image.resolveAssetSource(icons.alarm).uri }}
