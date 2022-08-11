@@ -15,7 +15,7 @@ const Support = () => {
             marginTop: headerHeight,
             // paddingHorizontal: SIZES.padding * 2
         }}>
-            <Text>지원금</Text>
+            <Text>Support.js의 내용 표시</Text>
         </View>
     )
 }

@@ -20,7 +20,7 @@ const Navtest = ({navigation: {goBack}}) => {
             <Text style={{
                 paddingHorizontal: 20,
                 fontSize: 20
-            }}>위의 drawer navigation과 알림 표시 버튼을 유지하면서, 새 화면 표시</Text>
+            }}>위의 drawer navigation과 알림 표시 버튼을 유지하면서, Navtest.js의 내용 표시</Text>
             <Button onPress={()=>{goBack() }} title="설정 화면으로 돌아가기"> </Button>
         </View>
     )

@@ -139,12 +139,12 @@ const SignUp = ({navigation}) => {
         return (
             <View
                 style={{
-                    marginTop: SIZES.padding * 3,
+                    marginTop: SIZES.padding,
                     marginHorizontal: SIZES.padding * 3,
                 }}
             >
                 {/* Full Name */}
-                <View style={{ marginTop: SIZES.padding * 3 }}>
+                <View style={{ marginTop: SIZES.padding }}>
                     <Text style={{ color: COLORS.lightGreen, ...FONTS.body3 }}>이름</Text>
                     <TextInput
                         style={{

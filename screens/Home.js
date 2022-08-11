@@ -15,7 +15,7 @@ const Home = () => {
             marginTop: headerHeight,
             // paddingHorizontal: SIZES.padding * 2
         }}>
-            <Text>자산</Text>
+            <Text>Home.js의 내용 표시</Text>
         </View>
     )
 }

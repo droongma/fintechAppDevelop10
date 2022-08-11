@@ -4,6 +4,7 @@ import { useFonts } from 'expo-font';
 // import Tabs from "./navigation/Tabs";
 import {FAKE_API_KEY} from '@env';
 import { createDrawerNavigator } from '@react-navigation/drawer';
+import { DrawerCustomContent } from './navigation/DrawerCustomContent';
 import { SignUpStackNavigator } from './navigation/SignUpStackNavigator';
 
 

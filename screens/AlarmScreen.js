@@ -44,7 +44,7 @@ const AlarmScreen = ({navigation}) => {
                 marginTop: 50,
                 // paddingHorizontal: SIZES.padding * 2
             }}>
-                <Text>새로운 창에서 알림화면 표시</Text>
+                <Text>새로운 화면에서, AlarmScreen.js의 내용 표시</Text>
                 <Button onPress={() => {navigation.goBack()}} title="홈 화면으로 돌아가기"> </Button>
             </View>
         </View>

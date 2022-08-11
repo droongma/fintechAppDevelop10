@@ -1,11 +1,12 @@
 import React from 'react';
-import { AlarmScreen, Annuity, Etc, Home, Setting, Support } from '../screens';
+import { AlarmScreen, Annuity, Etc, Home, Support } from '../screens';
 import { createDrawerNavigator } from '@react-navigation/drawer';
 import { SettingStackNavigator } from './SettingStackNavigator';
 import { COLORS, SIZES, FONTS, icons, images } from "../constants"
 import { Button, Image } from 'react-native';
 import { TouchableOpacity } from 'react-native-gesture-handler';
 import { createStackNavigator } from "@react-navigation/stack";
+import { DrawerCustomContent } from './DrawerCustomContent';
 
 const Drawer = createDrawerNavigator();
 const Stack = createStackNavigator();
@@ -15,6 +16,7 @@ const Stack = createStackNavigator();
 const DrawerNavigator = ({navigation}) => {
     return (
         <Drawer.Navigator 
+            drawerContent={(props)=> <DrawerCustomContent {...props}/>} // Drawer에 뭘 그릴지 직접 설정
             backBehavior='history' // 마지막으로 본 페이지로 돌아오게 설정
             screenOptions={{
                 headerShown: true,
@@ -37,17 +39,17 @@ const DrawerNavigator = ({navigation}) => {
                 ),
                 // headerStyle: {backgroundColor: 'transparent'}
             }} >
-            <Drawer.Screen name="Home" options={{ title: 'My home으로 제목바꾸기' }} component={Home} />
+            <Drawer.Screen name="Home" options={{ title: 'Home.js' }} component={Home} />
 
-            <Drawer.Screen name="Support" component={Support} />
+            <Drawer.Screen name="Support" options={{ title: 'Support.js' }} component={Support} />
 
-            <Drawer.Screen name="Annuity" component={Annuity} />
+            <Drawer.Screen name="Annuity" options={{ title: 'Annuity.js' }} component={Annuity} />
 
-            <Drawer.Screen name="Etc" component={Etc} />
+            <Drawer.Screen name="Etc" options={{ title: 'Etc.js' }} component={Etc} />
 
             <Drawer.Screen name="Setting" component={SettingStackNavigator} />
 
-            <Drawer.Screen name="Alarm" options={{ // Alarm 항목은 drawer에 안보이게 함. 아이콘 클릭으로만 접근 가능
+            <Drawer.Screen name="Alarm" options={{ // Alarm 항목은 drawer에 안보이게 함. 오른쪽 위의 아이콘 클릭으로만 접근 가능
                         drawerItemStyle: { height: 0 },
                         headerShown: false
                     }} 

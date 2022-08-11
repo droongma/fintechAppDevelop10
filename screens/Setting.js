@@ -16,6 +16,10 @@ const Setting = ({navigation}) => {
             marginTop: headerHeight,
             // paddingHorizontal: SIZES.padding * 2
         }}>
+            <Text style={{
+                paddingHorizontal: 20,
+                fontSize: 20
+            }}>Setting.js의 내용 표시</Text>
             <Button onPress={()=> {navigation.navigate("Navtest")}} title="다른 화면으로"></Button>
         </View>
     )

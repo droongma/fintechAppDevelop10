@@ -15,7 +15,7 @@ const Annuity = () => {
             marginTop: headerHeight,
             // paddingHorizontal: SIZES.padding * 2
         }}>
-            <Text>연금</Text>
+            <Text>Annuity.js의 내용 표시</Text>
         </View>
     )
 }

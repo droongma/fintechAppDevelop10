@@ -17,7 +17,7 @@ const Etc = () => {
             marginTop: headerHeight,
             // paddingHorizontal: SIZES.padding * 2
         }}>
-            <Text>기타 등등</Text>
+            <Text>Etc.js의 내용 표시</Text>
         </View>
     )
 }

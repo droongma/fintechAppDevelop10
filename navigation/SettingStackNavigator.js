@@ -10,9 +10,9 @@ const SettingStackNavigator = () => {
         <Stack.Navigator  screenOptions={{
             headerShown: false
           }}>
-            <Stack.Screen name="SettingStack" component={Setting} />
+            <Stack.Screen options={{ title: 'Setting.js',}} name="SettingStack" component={Setting} />
     
-            <Stack.Screen name="Navtest" component={Navtest} /> 
+            <Stack.Screen options={{ title: 'Navtest.js',}}  name="Navtest" component={Navtest} /> 
 {/* 
             <Stack.Screen name="AlarmStack" options={{
                         drawerItemStyle: { height: 0 },
