@@ -17,9 +17,10 @@ import {
 import { images } from '../constants';
 
 export function DrawerCustomContent(props) {
+    const [active, setActive] = React.useState('Home');
     return (
         <View style={{flex: 1}}>
-            <DrawerContentScrollView {...props}>
+            <DrawerContentScrollView {...props} >
                 <View style={[styles.userInfoSection, {flexDirection: 'row'}]}>
                     <View style={{marginTop: 15,}}>
                         <Avatar.Image source={images.profile} />
@@ -31,26 +32,56 @@ export function DrawerCustomContent(props) {
                 </View>
 
                 {/* Drawer 메뉴 표시 */}
-                <Drawer.Section style={{flex: 1, marginTop: 15}}>
+                <Drawer.Section style={{flex: 1, marginTop: 15,}}  >
                     <DrawerItem 
                         label='Home.js입니다' 
-                        onPress={()=>{props.navigation.navigate('Home');}} 
+                        style={
+                            (active === "Home")? {backgroundColor: "#CBE9AC"} : {backgroundColor: "#ffffff"}
+                        }
+                        onPress={()=>{
+                            setActive('Home');
+                            props.navigation.navigate('Home');
+                        }} 
                     />
                     <DrawerItem 
                         label='Support.js입니다' 
-                        onPress={()=>{props.navigation.navigate('Support');}} 
+                        style={
+                            (active === "Support")? {backgroundColor: "#CBE9AC"} : {backgroundColor: "#ffffff"}
+                        }
+                        onPress={()=>{
+                            setActive('Support')
+                            props.navigation.navigate('Support');
+                        }} 
                     />
                     <DrawerItem 
                         label='Annuity.js입니다' 
-                        onPress={()=>{props.navigation.navigate('Annuity');}} 
+                        style={
+                            (active === "Annuity")? {backgroundColor: "#CBE9AC"} : {backgroundColor: "#ffffff"}
+                        }
+                        onPress={()=>{
+                            setActive('Annuity')
+                            props.navigation.navigate('Annuity');
+                        }} 
                     />
                     <DrawerItem 
                         label='Etc.js입니다' 
-                        onPress={()=>{props.navigation.navigate('Etc');}} 
+                        style={
+                            (active === "Etc")? {backgroundColor: "#CBE9AC"} : {backgroundColor: "#ffffff"}
+                        }
+                        onPress={()=>{
+                            setActive('Etc')
+                            props.navigation.navigate('Etc');
+                        }} 
                     />
                     <DrawerItem 
                         label='Setting.js입니다' 
-                        onPress={()=>{props.navigation.navigate('Setting');}} 
+                        style={
+                            (active === "Setting")? {backgroundColor: "#CBE9AC"} : {backgroundColor: "#ffffff"}
+                        }
+                        onPress={()=>{
+                            setActive('Setting')
+                            props.navigation.navigate('Setting');
+                        }}  
                     />
                     <DrawerItem 
                         style={{

@@ -19,6 +19,7 @@ const DrawerNavigator = ({navigation}) => {
             drawerContent={(props)=> <DrawerCustomContent {...props}/>} // Drawer에 뭘 그릴지 직접 설정
             backBehavior='history' // 마지막으로 본 페이지로 돌아오게 설정
             screenOptions={{
+                drawerActiveBackgroundColor: '#c6cbef',
                 headerShown: true,
                 headerTransparent: true,
                 headerTitle: '',
@@ -39,7 +40,7 @@ const DrawerNavigator = ({navigation}) => {
                 ),
                 // headerStyle: {backgroundColor: 'transparent'}
             }} >
-            <Drawer.Screen name="Home" options={{ title: 'Home.js' }} component={Home} />
+            <Drawer.Screen name="Home" options={{ title: 'Home.js'  }} component={Home} />
 
             <Drawer.Screen name="Support" options={{ title: 'Support.js' }} component={Support} />
 
