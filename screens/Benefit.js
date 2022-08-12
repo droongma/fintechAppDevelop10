@@ -53,7 +53,7 @@ export default Benefit = ({ navigation }) => {
         <FontAwesome.Button
           name={"home"}
           color={"white"}
-          size={"40"}
+          size={40}
           justifyContent={"center"}
           backgroundColor={"rgba(0,0,0,0)"}
           onPress={() => {
