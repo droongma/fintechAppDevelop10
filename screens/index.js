@@ -8,6 +8,7 @@ import Etc from "./Etc";
 import AlarmScreen from "./AlarmScreen";
 import Benefit from "./Benefit";
 import NonBenefit from "./NonBenefit";
+import IncomeAnalysis from "./IncomeAnalysis";
 
 export {
   Home,
@@ -20,4 +21,5 @@ export {
   AlarmScreen,
   Benefit,
   NonBenefit,
+  IncomeAnalysis,
 };

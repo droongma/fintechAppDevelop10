@@ -5,6 +5,7 @@ import { useHeaderHeight } from "@react-navigation/elements";
 import FontAwesome from "@expo/vector-icons/FontAwesome";
 import { shadow } from "react-native-paper";
 import { useGlobalState } from "../GlobalState/GlobalStates";
+import { images } from "../constants";
 
 export default Benefit = ({ navigation }) => {
   const [activePage, setActivePage] = useGlobalState("activePage"); // global state
@@ -30,7 +31,7 @@ export default Benefit = ({ navigation }) => {
             alignItems: "center",
             width: 350,
             height: 350,
-            borderRadius: "200%",
+            borderRadius: 10,
             borderWidth: 0.5,
             borderColor: "#F5F5F5",
             shadowOpacity: 0.25,
@@ -42,7 +43,7 @@ export default Benefit = ({ navigation }) => {
               alignItems: "center",
               width: 275,
               height: 275,
-              borderRadius: "200%",
+              borderRadius: 10,
               borderWidth: 1,
               borderColor: "#F5F5F5",
               shadowOpacity: 0.25,
@@ -54,7 +55,7 @@ export default Benefit = ({ navigation }) => {
                 alignItems: "center",
                 width: 200,
                 height: 200,
-                borderRadius: "200%",
+                borderRadius: 10,
                 borderWidth: 2,
                 borderColor: "#F5F5F5",
                 shadowOpacity: 0.25,
@@ -66,15 +67,15 @@ export default Benefit = ({ navigation }) => {
                   alignItems: "center",
                   width: 150,
                   height: 150,
-                  borderRadius: "200%",
+                  borderRadius: 10,
                   shadowOpacity: 0.25,
                 }}
-                source={require("/Users/leesugang/fintechAppDevelop10/assets/images/beneficiary.png")}
+                source={images.beneficiary}
               />
             </View>
           </View>
         </View>
-
+              
         <Text style={styles.infoText}>
           {`채현님은 기준 소득인정액 이하이므로, 
           만 65세 이상이 되셨을 때,
@@ -85,7 +86,7 @@ export default Benefit = ({ navigation }) => {
             colors={["#6E64D4", "#5AA9FC"]}
             start={{ x: 0, y: 0 }}
             end={{ x: 1, y: 0 }}
-            borderRadius={"25px"}
+            borderRadius={25}
             padding={10}
           >
             <Text style={styles.textColor}>
@@ -99,7 +100,7 @@ export default Benefit = ({ navigation }) => {
             colors={["#6E64D4", "#5AA9FC"]}
             start={{ x: 0, y: 0 }}
             end={{ x: 1, y: 0 }}
-            borderRadius={"25px"}
+            borderRadius={25}
             padding={10}
           >
             <Text style={styles.textColor}>
@@ -109,12 +110,12 @@ export default Benefit = ({ navigation }) => {
         </TouchableOpacity>
 
         <FontAwesome.Button
-          name={"home"}
-          color={"white"}
+          name="home"
+          color="white"
           size={40}
           padding={30}
-          justifyContent={"center"}
-          backgroundColor={"rgba(0,0,0,0)"}
+          justifyContent="center"
+          backgroundColor="rgba(0,0,0,0)"
           onPress={() => {
             setActivePage("Home");
             navigation.navigate("Home");
@@ -143,12 +144,15 @@ const styles = StyleSheet.create({
     color: "white",
   },
   infoText: {
-    fonFamily: "Hahmlet",
+    // fontFamily: "Hahmlet",
     fontWeight: "700",
-    fontSize: "23px",
-    lineHeight: "33px",
-    textAlign: "center",
-    padding: 20,
+    fontSize: 23,
+    marginVertical: 20,
+    marginLeft: 10,
+    // marginHorizontal: 20,
+    // lineHeight: 33,
+    // textAlign: "center",
+    // padding: 20,
     color: "#FFFFFF",
     shadowOpacity: 0.25,
     shadowOffset: {

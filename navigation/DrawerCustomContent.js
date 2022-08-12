@@ -45,18 +45,7 @@ export function DrawerCustomContent(props) {
               props.navigation.navigate("Home");
             }}
           />
-          <DrawerItem
-            label="Support.js입니다"
-            style={
-              activePage === "Support"
-                ? { backgroundColor: "#CBE9AC" }
-                : { backgroundColor: "#ffffff" }
-            }
-            onPress={() => {
-              setActivePage("Support");
-              props.navigation.navigate("Support");
-            }}
-          />
+          
           <DrawerItem
             label="Annuity.js입니다"
             style={
@@ -69,30 +58,7 @@ export function DrawerCustomContent(props) {
               props.navigation.navigate("Annuity");
             }}
           />
-          <DrawerItem
-            label="Etc.js입니다"
-            style={
-              activePage === "Etc"
-                ? { backgroundColor: "#CBE9AC" }
-                : { backgroundColor: "#ffffff" }
-            }
-            onPress={() => {
-              setActivePage("Etc");
-              props.navigation.navigate("Etc");
-            }}
-          />
-          <DrawerItem
-            label="Setting.js입니다"
-            style={
-              activePage === "Setting"
-                ? { backgroundColor: "#CBE9AC" }
-                : { backgroundColor: "#ffffff" }
-            }
-            onPress={() => {
-              setActivePage("Setting");
-              props.navigation.navigate("Setting");
-            }}
-          />
+          
           <DrawerItem
             label="Benefit.js입니다"
             style={
@@ -116,6 +82,58 @@ export function DrawerCustomContent(props) {
             onPress={() => {
               setActivePage("NonBenefit");
               props.navigation.navigate("NonBenefit");
+            }}
+          />
+
+          <DrawerItem
+            label="IncomeAnalysis.js입니다"
+            style={
+              activePage === "IncomeAnalysis"
+                ? { backgroundColor: "#CBE9AC" }
+                : { backgroundColor: "#ffffff" }
+            }
+            onPress={() => {
+              setActivePage("IncomeAnalysis");
+              props.navigation.navigate("IncomeAnalysis");
+            }}
+          />
+
+          <DrawerItem
+            label="Etc.js입니다"
+            style={
+              activePage === "Etc"
+                ? { backgroundColor: "#CBE9AC" }
+                : { backgroundColor: "#ffffff" }
+            }
+            onPress={() => {
+              setActivePage("Etc");
+              props.navigation.navigate("Etc");
+            }}
+          />
+
+          <DrawerItem
+            label="Support.js입니다"
+            style={
+              activePage === "Support"
+                ? { backgroundColor: "#CBE9AC" }
+                : { backgroundColor: "#ffffff" }
+            }
+            onPress={() => {
+              setActivePage("Support");
+              props.navigation.navigate("Support");
+            }}
+          />
+
+          <DrawerItem
+            label="Setting.js입니다"
+            style={
+              activePage === "Setting"
+                ? { backgroundColor: "#CBE9AC" }
+                : { backgroundColor: "#ffffff" }
+            }
+            onPress={() => {
+              setActivePage("Setting");
+              props.navigation.navigate("Setting");
             }}
           />
 

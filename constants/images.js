@@ -2,7 +2,10 @@ const wallieLogo = require("../assets/images/wallie-logo.png");
 const banner = require("../assets/images/banner.png");
 const promoBanner = require("../assets/images/promo-banner.png");
 const focus = require("../assets/images/focus.png");
-const profile = require("../assets/images/profile.png")
+const profile = require("../assets/images/profile.png");
+const beneficiary = require("../assets/images/beneficiary.png");
+const nonbeneficiary = require("../assets/images/non-beneficiary.png");
+
 
 // Dummy
 const usFlag = require("../assets/images/us-flag.jpg");
@@ -13,6 +16,8 @@ export default {
     promoBanner,
     focus,
     profile,
+    beneficiary,
+    nonbeneficiary,
 
     // Dummy
     usFlag,
