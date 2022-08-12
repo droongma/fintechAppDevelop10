@@ -45,6 +45,7 @@ const DrawerNavigator = ({ navigation }) => {
                 width: 30,
                 height: 30,
                 marginRight: 10,
+                // backgroundColor: "rgba(0,0,0,0)"
               }}
             />
           </TouchableOpacity>

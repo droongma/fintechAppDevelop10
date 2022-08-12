@@ -38,7 +38,7 @@ const Home = () => {
               alignItems: "center",
               width: 250,
               height: 250,
-              borderRadius: "200%",
+              borderRadius: 10,
               borderWidth: 20,
               borderColor: "#4960F9",
             }}
@@ -70,8 +70,8 @@ const styles = StyleSheet.create({
   helloText: {
     color: "white",
     fontWeight: "700",
-    fontSize: "40px",
-    lineHeight: "33px",
+    fontSize: 40,
+    lineHeight: 33,
     textAlign: "center",
     marginTop: "30%",
     padding: 10,
@@ -91,7 +91,7 @@ const styles = StyleSheet.create({
   },
   goCheck: {
     justifyContent: "center",
-    alignItems: "left",
+    alignItems: "flex-start",
     backgroundColor: "#1433FF",
     borderRadius: 20,
     flex: 1.7,
