@@ -120,6 +120,19 @@ export function DrawerCustomContent(props) {
           />
 
           <DrawerItem
+            label="IncomeAnalysis.js입니다"
+            style={
+              activePage === "IncomeAnalysis"
+                ? { backgroundColor: "#CBE9AC" }
+                : { backgroundColor: "#ffffff" }
+            }
+            onPress={() => {
+              setActivePage("IncomeAnalysis");
+              props.navigation.navigate("IncomeAnalysis");
+            }}
+          />
+
+          <DrawerItem
             style={{
               height: 0,
               headerShown: false,

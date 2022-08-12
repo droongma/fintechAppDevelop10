@@ -7,6 +7,7 @@ import {
   Support,
   Benefit,
   NonBenefit,
+  IncomeAnalysis,
 } from "../screens";
 import { createDrawerNavigator } from "@react-navigation/drawer";
 import { SettingStackNavigator } from "./SettingStackNavigator";
@@ -83,6 +84,12 @@ const DrawerNavigator = ({ navigation }) => {
         name="NonBenefit"
         options={{ title: "NonBenefit.js" }}
         component={NonBenefit}
+      />
+
+      <Drawer.Screen
+        name="IncomeAnalysis"
+        options={{ title: "IncomeAnalysis.js" }}
+        component={IncomeAnalysis}
       />
 
       <Drawer.Screen
