@@ -5,9 +5,12 @@ import {
 } from "react-native";
 import { COLORS, SIZES, FONTS, icons, images } from "../constants"
 import { useHeaderHeight } from '@react-navigation/elements';
+import { useGlobalState } from "../GlobalState/GlobalStates";
 
 const Home = () => {
     const headerHeight = useHeaderHeight();
+    // const [activePage, setActivepage] = useGlobalState('activePage');
+    // if (activePage === "Home") setActivepage("sda");
     return (
         <View style={{
             justifyContent: "center",
@@ -16,6 +19,7 @@ const Home = () => {
             // paddingHorizontal: SIZES.padding * 2
         }}>
             <Text>Home.js의 내용 표시</Text>
+            {/* <Text>{activePage}</Text> */}
         </View>
     )
 }

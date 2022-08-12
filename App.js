@@ -7,8 +7,6 @@ import { createDrawerNavigator } from '@react-navigation/drawer';
 import { DrawerCustomContent } from './navigation/DrawerCustomContent';
 import { SignUpStackNavigator } from './navigation/SignUpStackNavigator';
 
-
-// const Stack = createStackNavigator();
 const Drawer = createDrawerNavigator();
 
 const App = () => {

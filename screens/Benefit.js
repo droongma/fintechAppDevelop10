@@ -4,8 +4,10 @@ import { LinearGradient } from "expo-linear-gradient";
 import { useHeaderHeight } from "@react-navigation/elements";
 import FontAwesome from "@expo/vector-icons/FontAwesome";
 import { shadow } from "react-native-paper";
+import { useGlobalState } from "../GlobalState/GlobalStates";
 
 export default Benefit = ({ navigation }) => {
+  const [activePage, setActivePage] = useGlobalState('activePage'); // global state
   const headerHeight = useHeaderHeight();
   return (
     <LinearGradient
@@ -57,6 +59,7 @@ export default Benefit = ({ navigation }) => {
           justifyContent={"center"}
           backgroundColor={"rgba(0,0,0,0)"}
           onPress={() => {
+            setActivePage("Home");
             navigation.navigate("Home");
           }}
         />

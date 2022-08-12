@@ -12,9 +12,12 @@ import {
   Switch,
 } from "react-native-paper";
 import { images } from "../constants";
+import { useGlobalState } from "../GlobalState/GlobalStates";
 
 export function DrawerCustomContent(props) {
-  const [active, setActive] = React.useState("Home");
+  // const [active, setActive] = React.useState("Home");
+  const [activePage, setActivePage] = useGlobalState('activePage'); // global state
+
   return (
     <View style={{ flex: 1 }}>
       <DrawerContentScrollView {...props}>
@@ -33,63 +36,76 @@ export function DrawerCustomContent(props) {
           <DrawerItem
             label="Home.js입니다"
             style={
-              active === "Home"
+              activePage === "Home"
                 ? { backgroundColor: "#CBE9AC" }
                 : { backgroundColor: "#ffffff" }
             }
             onPress={() => {
-              setActive("Home");
+              setActivePage("Home");
               props.navigation.navigate("Home");
             }}
           />
           <DrawerItem
             label="Support.js입니다"
             style={
-              active === "Support"
+              activePage === "Support"
                 ? { backgroundColor: "#CBE9AC" }
                 : { backgroundColor: "#ffffff" }
             }
             onPress={() => {
-              setActive("Support");
+              setActivePage("Support");
               props.navigation.navigate("Support");
             }}
           />
           <DrawerItem
             label="Annuity.js입니다"
             style={
-              active === "Annuity"
+              activePage === "Annuity"
                 ? { backgroundColor: "#CBE9AC" }
                 : { backgroundColor: "#ffffff" }
             }
             onPress={() => {
-              setActive("Annuity");
+              setActivePage("Annuity");
               props.navigation.navigate("Annuity");
             }}
           />
           <DrawerItem
             label="Etc.js입니다"
             style={
-              active === "Etc"
+              activePage === "Etc"
                 ? { backgroundColor: "#CBE9AC" }
                 : { backgroundColor: "#ffffff" }
             }
             onPress={() => {
-              setActive("Etc");
+              setActivePage("Etc");
               props.navigation.navigate("Etc");
             }}
           />
           <DrawerItem
             label="Setting.js입니다"
             style={
-              active === "Setting"
+              activePage === "Setting"
                 ? { backgroundColor: "#CBE9AC" }
                 : { backgroundColor: "#ffffff" }
             }
             onPress={() => {
-              setActive("Setting");
+              setActivePage("Setting");
               props.navigation.navigate("Setting");
             }}
           />
+          <DrawerItem
+            label="Benefit.js입니다"
+            style={
+              activePage === "Benefit"
+                ? { backgroundColor: "#CBE9AC" }
+                : { backgroundColor: "#ffffff" }
+            }
+            onPress={() => {
+              setActivePage("Benefit");
+              props.navigation.navigate("Benefit");
+            }}
+          />
+          
           <DrawerItem
             style={{
               height: 0,
@@ -100,18 +116,7 @@ export function DrawerCustomContent(props) {
               props.navigation.navigate("Alarm");
             }}
           />
-          <DrawerItem
-            label="Benefit.js입니다"
-            style={
-              active === "Benefit"
-                ? { backgroundColor: "#CBE9AC" }
-                : { backgroundColor: "#ffffff" }
-            }
-            onPress={() => {
-              setActive("Benefit");
-              props.navigation.navigate("Benefit");
-            }}
-          />
+          
         </Drawer.Section>
       </DrawerContentScrollView>
     </View>
