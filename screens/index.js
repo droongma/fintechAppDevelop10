@@ -7,6 +7,7 @@ import Navtest from "./Navtest";
 import Etc from "./Etc";
 import AlarmScreen from "./AlarmScreen";
 import Benefit from "./Benefit";
+import NonBenefit from "./NonBenefit";
 
 export {
   Home,
@@ -18,4 +19,5 @@ export {
   Etc,
   AlarmScreen,
   Benefit,
+  NonBenefit,
 };

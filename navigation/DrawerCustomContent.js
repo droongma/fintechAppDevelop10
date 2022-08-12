@@ -16,7 +16,7 @@ import { useGlobalState } from "../GlobalState/GlobalStates";
 
 export function DrawerCustomContent(props) {
   // const [active, setActive] = React.useState("Home");
-  const [activePage, setActivePage] = useGlobalState('activePage'); // global state
+  const [activePage, setActivePage] = useGlobalState("activePage"); // global state
 
   return (
     <View style={{ flex: 1 }}>
@@ -105,7 +105,20 @@ export function DrawerCustomContent(props) {
               props.navigation.navigate("Benefit");
             }}
           />
-          
+
+          <DrawerItem
+            label="NonBenefit.js입니다"
+            style={
+              activePage === "NonBenefit"
+                ? { backgroundColor: "#CBE9AC" }
+                : { backgroundColor: "#ffffff" }
+            }
+            onPress={() => {
+              setActivePage("NonBenefit");
+              props.navigation.navigate("NonBenefit");
+            }}
+          />
+
           <DrawerItem
             style={{
               height: 0,
@@ -116,7 +129,6 @@ export function DrawerCustomContent(props) {
               props.navigation.navigate("Alarm");
             }}
           />
-          
         </Drawer.Section>
       </DrawerContentScrollView>
     </View>

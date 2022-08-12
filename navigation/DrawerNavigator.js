@@ -1,5 +1,13 @@
 import React from "react";
-import { AlarmScreen, Annuity, Etc, Home, Support, Benefit } from "../screens";
+import {
+  AlarmScreen,
+  Annuity,
+  Etc,
+  Home,
+  Support,
+  Benefit,
+  NonBenefit,
+} from "../screens";
 import { createDrawerNavigator } from "@react-navigation/drawer";
 import { SettingStackNavigator } from "./SettingStackNavigator";
 import { COLORS, SIZES, FONTS, icons, images } from "../constants";
@@ -69,6 +77,12 @@ const DrawerNavigator = ({ navigation }) => {
         name="Benefit"
         options={{ title: "Benefit.js" }}
         component={Benefit}
+      />
+
+      <Drawer.Screen
+        name="NonBenefit"
+        options={{ title: "NonBenefit.js" }}
+        component={NonBenefit}
       />
 
       <Drawer.Screen

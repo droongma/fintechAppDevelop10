@@ -6,7 +6,7 @@ import FontAwesome from "@expo/vector-icons/FontAwesome";
 import { shadow } from "react-native-paper";
 import { useGlobalState } from "../GlobalState/GlobalStates";
 
-export default Benefit = ({ navigation }) => {
+export default NonBenefit = ({ navigation }) => {
   const [activePage, setActivePage] = useGlobalState("activePage"); // global state
   const headerHeight = useHeaderHeight();
   return (
@@ -69,7 +69,7 @@ export default Benefit = ({ navigation }) => {
                   borderRadius: "200%",
                   shadowOpacity: 0.25,
                 }}
-                source={require("/Users/leesugang/fintechAppDevelop10/assets/images/beneficiary.png")}
+                source={require("/Users/leesugang/fintechAppDevelop10/assets/images/non-beneficiary.png")}
               />
             </View>
           </View>
@@ -125,9 +125,6 @@ export default Benefit = ({ navigation }) => {
   );
 };
 
-//<View style={styles.oval}>
-//<View style={styles.oval}>
-
 const styles = StyleSheet.create({
   analyButton: {
     shadowColor: "#000",
@@ -156,5 +153,4 @@ const styles = StyleSheet.create({
       height: 4,
     },
   },
-  oval: {},
 });
