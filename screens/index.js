@@ -1,19 +1,23 @@
-import Home from "./Home"
-import Scan from "./Scan"
-import SignUp from "./SignUp"
-import Support from "./Support"
-import Setting from "./Setting"
-import Annuity from "./Annuity"
-import Navtest from "./Navtest"
-import Etc from "./Etc"
+import Home from "./Home";
+import SignUp from "./SignUp";
+import Support from "./Support";
+import Setting from "./Setting";
+import Annuity from "./Annuity";
+import Navtest from "./Navtest";
+import Etc from "./Etc";
+import AlarmScreen from "./AlarmScreen";
+import Benefit from "./Benefit";
+import NonBenefit from "./NonBenefit";
 
 export {
-    Home,
-    Scan,
-    SignUp,
-    Support,
-    Annuity,
-    Setting,
-    Navtest,
-    Etc,
-}
+  Home,
+  SignUp,
+  Support,
+  Annuity,
+  Setting,
+  Navtest,
+  Etc,
+  AlarmScreen,
+  Benefit,
+  NonBenefit,
+};

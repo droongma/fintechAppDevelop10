@@ -1,0 +1,167 @@
+import React from "react";
+import { View, StyleSheet } from "react-native";
+import { DrawerContentScrollView, DrawerItem } from "@react-navigation/drawer";
+import {
+  Avatar, // 유저 이미지 만들 때 주로 사용
+  Title,
+  Caption,
+  Paragraph,
+  Drawer,
+  Text,
+  TouchableRipple,
+  Switch,
+} from "react-native-paper";
+import { images } from "../constants";
+import { useGlobalState } from "../GlobalState/GlobalStates";
+
+export function DrawerCustomContent(props) {
+  // const [active, setActive] = React.useState("Home");
+  const [activePage, setActivePage] = useGlobalState("activePage"); // global state
+
+  return (
+    <View style={{ flex: 1 }}>
+      <DrawerContentScrollView {...props}>
+        <View style={[styles.userInfoSection, { flexDirection: "row" }]}>
+          <View style={{ marginTop: 15 }}>
+            <Avatar.Image source={images.profile} />
+          </View>
+          <View style={{ marginStart: 9, marginTop: 15 }}>
+            <Title style={styles.title}>김혜원</Title>
+            <Caption style={styles.caption}>@deliogustav</Caption>
+          </View>
+        </View>
+
+        {/* Drawer 메뉴 표시 */}
+        <Drawer.Section style={{ flex: 1, marginTop: 15 }}>
+          <DrawerItem
+            label="Home.js입니다"
+            style={
+              activePage === "Home"
+                ? { backgroundColor: "#CBE9AC" }
+                : { backgroundColor: "#ffffff" }
+            }
+            onPress={() => {
+              setActivePage("Home");
+              props.navigation.navigate("Home");
+            }}
+          />
+          <DrawerItem
+            label="Support.js입니다"
+            style={
+              activePage === "Support"
+                ? { backgroundColor: "#CBE9AC" }
+                : { backgroundColor: "#ffffff" }
+            }
+            onPress={() => {
+              setActivePage("Support");
+              props.navigation.navigate("Support");
+            }}
+          />
+          <DrawerItem
+            label="Annuity.js입니다"
+            style={
+              activePage === "Annuity"
+                ? { backgroundColor: "#CBE9AC" }
+                : { backgroundColor: "#ffffff" }
+            }
+            onPress={() => {
+              setActivePage("Annuity");
+              props.navigation.navigate("Annuity");
+            }}
+          />
+          <DrawerItem
+            label="Etc.js입니다"
+            style={
+              activePage === "Etc"
+                ? { backgroundColor: "#CBE9AC" }
+                : { backgroundColor: "#ffffff" }
+            }
+            onPress={() => {
+              setActivePage("Etc");
+              props.navigation.navigate("Etc");
+            }}
+          />
+          <DrawerItem
+            label="Setting.js입니다"
+            style={
+              activePage === "Setting"
+                ? { backgroundColor: "#CBE9AC" }
+                : { backgroundColor: "#ffffff" }
+            }
+            onPress={() => {
+              setActivePage("Setting");
+              props.navigation.navigate("Setting");
+            }}
+          />
+          <DrawerItem
+            label="Benefit.js입니다"
+            style={
+              activePage === "Benefit"
+                ? { backgroundColor: "#CBE9AC" }
+                : { backgroundColor: "#ffffff" }
+            }
+            onPress={() => {
+              setActivePage("Benefit");
+              props.navigation.navigate("Benefit");
+            }}
+          />
+
+          <DrawerItem
+            label="NonBenefit.js입니다"
+            style={
+              activePage === "NonBenefit"
+                ? { backgroundColor: "#CBE9AC" }
+                : { backgroundColor: "#ffffff" }
+            }
+            onPress={() => {
+              setActivePage("NonBenefit");
+              props.navigation.navigate("NonBenefit");
+            }}
+          />
+
+          <DrawerItem
+            style={{
+              height: 0,
+              headerShown: false,
+            }}
+            label="AlarmScreen.js입니다"
+            onPress={() => {
+              props.navigation.navigate("Alarm");
+            }}
+          />
+        </Drawer.Section>
+      </DrawerContentScrollView>
+    </View>
+  );
+}
+
+const styles = StyleSheet.create({
+  userInfoSection: {
+    paddingTop: 25,
+    paddingStart: 15,
+    alignItems: "center",
+  },
+  section: {
+    flexDirection: "row",
+    alignItems: "center",
+    marginStart: 0,
+  },
+  Paragraph: {
+    fontWeight: "bold",
+    marginEnd: 3,
+  },
+  drawerSection: {
+    marginTop: 15,
+  },
+  bottomDrawerSection: {
+    marginBottom: 15,
+    borderTopColor: "#f4f4f4",
+    borderTopWidth: 1,
+  },
+  preference: {
+    flexDirection: "row",
+    justifyContent: "space-between",
+    paddingVertical: 12,
+    paddingHorizontal: 16,
+  },
+});

@@ -4,17 +4,18 @@ import {
     Text
 } from "react-native";
 import { COLORS, SIZES, FONTS, icons, images } from "../constants"
+import { useHeaderHeight } from '@react-navigation/elements';
 
 const Support = () => {
+    const headerHeight = useHeaderHeight();
     return (
         <View style={{
-            flexDirection: 'row',
             justifyContent: "center",
             alignItems: "center", // 각 자식 아이템들이 가운데 높이에 위치하도록 정렬
-            marginTop: SIZES.padding * 6,
+            marginTop: headerHeight,
             // paddingHorizontal: SIZES.padding * 2
         }}>
-            <Text>지원금</Text>
+            <Text>Support.js의 내용 표시</Text>
         </View>
     )
 }
