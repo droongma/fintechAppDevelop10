@@ -121,7 +121,7 @@ const SignUp = ({ navigation }) => {
             ...FONTS.h4,
           }}
         >
-          회원가입
+          노후모아 회원가입
         </Text>
       </TouchableOpacity>
     );
@@ -131,7 +131,7 @@ const SignUp = ({ navigation }) => {
     return (
       <View
         style={{
-          marginTop: SIZES.padding * 5,
+          marginTop: SIZES.padding,
           height: 100,
           alignItems: "center",
           justifyContent: "center",
@@ -157,7 +157,7 @@ const SignUp = ({ navigation }) => {
         }}
       >
         {/* Full Name */}
-        <View style={{ marginTop: SIZES.padding }}>
+        <View style={{ marginTop: SIZES.padding * 3 }}>
           <Text style={{ color: COLORS.lightGreen, ...FONTS.body3 }}>이름</Text>
           <TextInput
             style={{
@@ -372,7 +372,8 @@ const SignUp = ({ navigation }) => {
       style={{ flex: 1 }}
     >
       <LinearGradient
-        colors={["#36D1DC", "#5B86E5"]}
+        colors={["#06beb6", "#48b1bf"]}
+        // colors={["#36D1DC", "#5B86E5"]}
         style={{ flex: 1 }}
         start={{ x: 0, y: 0 }}
         end={{ x: 1, y: 0 }}
@@ -380,7 +381,7 @@ const SignUp = ({ navigation }) => {
         <ScrollView>
           {renderHeader()}
           {/* <RenderHeader text="Hi~" /> */}
-          {renderLogo()}
+          {/* {renderLogo()} */}
           {renderForm()}
           {renderButton()}
         </ScrollView>

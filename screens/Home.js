@@ -1,5 +1,5 @@
 import React from "react";
-import { View, Text, StyleSheet, TouchableOpacity } from "react-native";
+import { View, Text, StyleSheet, TouchableOpacity, ScrollView } from "react-native";
 import { LinearGradient } from "expo-linear-gradient";
 
 import { COLORS, SIZES, FONTS, icons, images } from "../constants";
@@ -11,7 +11,7 @@ const Home = () => {
   // const [activePage, setActivepage] = useGlobalState('activePage');
   // if (activePage === "Home") setActivepage("sda");
   return (
-    <View style={{ justifyContent: "center", alignItems: "center", flex: 1 }}>
+    <ScrollView style={{ flex: 1 }}>
       <LinearGradient
         colors={["#39CCDD", "#4960F9"]}
         style={{
@@ -26,7 +26,7 @@ const Home = () => {
         start={{ x: 0, y: 1 }}
         end={{ x: 0, y: 0 }}
       >
-        <Text style={styles.helloText}> 안녕하세요, 송채현님 </Text>
+        <Text style={{...styles.helloText, marginTop: headerHeight}}> 안녕하세요, 송채현님 </Text>
         <View style={styles.card}>
           <Text style={{ marginTop: 30, fontSize: 30, fontWeight: "700" }}>
             채현님의 노후대비율은?
@@ -60,7 +60,7 @@ const Home = () => {
       <TouchableOpacity style={styles.goCheck}>
         <Text style={styles.checkText}>{`기초연금 수금자격 확인하러가기`}</Text>
       </TouchableOpacity>
-    </View>
+    </ScrollView>
   );
 };
 
@@ -73,7 +73,7 @@ const styles = StyleSheet.create({
     fontSize: 40,
     lineHeight: 33,
     textAlign: "center",
-    marginTop: "30%",
+    marginTop: "10%",
     padding: 10,
   },
   card: {
@@ -91,15 +91,16 @@ const styles = StyleSheet.create({
   },
   goCheck: {
     justifyContent: "center",
-    alignItems: "flex-start",
+    // alignItems: "flex-start",
     backgroundColor: "#1433FF",
     borderRadius: 20,
     flex: 1.7,
     width: "90%",
-    margin: "5%",
+    alignSelf: 'center'
+    // margin: "5%",
   },
   checkText: {
-    margin: "5%",
+    // margin: "5%",
     fontSize: 40,
     fontWeight: "500",
     textAlign: "left",
