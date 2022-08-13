@@ -14,6 +14,7 @@ import OldPrepPredict2 from "./OldPrepPredict2";
 import OldPrepPredict3 from "./OldPrepPredict3";
 import InfoInput from "./InfoInput";
 import FinanceProduct from "./FinanceProduct";
+import NewsScreen from "./NewsScreen";
 
 export {
   Home,
@@ -31,5 +32,6 @@ export {
   OldPrepPredict2,
   OldPrepPredict3,
   InfoInput,
-  FinanceProduct ,
+  FinanceProduct,
+  NewsScreen,
 };

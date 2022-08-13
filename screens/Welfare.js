@@ -17,18 +17,21 @@ const Welfare = () => {
 
   const featuredWelfareList = [
       {
+        id: 136334,
         title: "주택담보노후연금보증",
         tag1: "#중앙부처 복지사업",
         tag2: "#중장년 #노년",
         tag3: "#생활지원 #서민금융",
       },
       {
+        id: 253124,
         title: "노인평생교육지원",
         tag1: "#평생교육 지업사원",
         tag2: "#중장년 #노년",
         tag3: "#여가지원 #교육지원",
       },
       {
+        id: 76967,
         title: "노인정서생활지원",
         tag1: "#중앙부처 복지사업",
         tag2: "#중장년 #노년",
@@ -36,7 +39,17 @@ const Welfare = () => {
       },
   ]
 
-  const keywords = ["자녀", "장애인", "공무원", "신체건강", "산업재해"];
+  const keywords = ["노인", "자녀", "장애인", "공무원", "신체건강"];
+  const keywordWelfares = keywords.reduce((accumulator, value) => {
+    return {...accumulator, [value]: ''};
+  }, {});
+
+  keywordWelfares[keywords[0]] = {idx: 0, data: ["은퇴후 생활 지원", "노인 자산관리 지원", "노인 취미교실 모집", "노인 건강상담 안내"]};
+  keywordWelfares[keywords[1]] = {idx: 1, data:["양육비 지원", "교육비 지원", "아동스포츠 교육 모집", "한국어 교실"]};
+  keywordWelfares[keywords[2]] = {idx: 2, data:["장애인 연금", "장애인 출산 지원", "장애인 이동 지원", "장애인 인재양성 코스 모집"]};
+  keywordWelfares[keywords[3]] = {idx: 3, data:["공무원 정신건강 지원센터", "공무원 연금", "공무원 취미교실"]};
+  keywordWelfares[keywords[4]] = {idx: 4, data:["건강센터 안내", "치료비 지원", "재활치료 지원", "생활스포츠 교실", "직장인 병원치료 지원", ]};
+
 
   function renderFeaturedWelfares() {
     const renderItem = ({ item, index }) => (
@@ -78,7 +91,7 @@ const Welfare = () => {
           <FlatList
             data={featuredWelfareList}
             renderItem={renderItem}
-            keyExtractor={(item, index) => index}
+            keyExtractor={(item, index) => item.id}
             horizontal
             showsHorizontalScrollIndicator={true}
           />
@@ -107,11 +120,45 @@ const Welfare = () => {
           <FlatList
             data={keywords}
             renderItem={renderItem}
-            keyExtractor={(item, index) => index}
+            keyExtractor={(item, index) => "keyasd" + index}
             horizontal
             showsHorizontalScrollIndicator={true}
             
           />
+        }
+      </View>
+    )
+  }
+
+  function renderKeywordWelfares() {
+    const renderItem = ({ item, index }) => (
+      <TouchableOpacity 
+        activeOpacity={1}
+      >
+        <View style={{...styles.KeywordWelfareStyle,borderRadius: 10, }}>
+          <View style={{...styles.KeywordWelfareInnerStyle,borderRadius: 10, }}>
+            <Text style={{...FONTS.h2, marginVertical: 5, marginHorizontal: 10}}>{item}</Text>
+          </View>
+          <Text style={{...FONTS.body3, marginVertical: 5, alignSelf: 'center'}}>자세히 보기</Text>
+        </View>
+      </TouchableOpacity>
+    )
+
+    return (
+      <View style={{marginTop: 10,}}>
+        {
+          keywords.map((keyword, index) => (
+            (keyword===category) ? (
+                <FlatList
+                  key={index}
+                  data={keywordWelfares[keyword].data}
+                  renderItem={renderItem}
+                  keyExtractor={(item, index) => 'vb'+index}
+                  horizontal
+                  showsHorizontalScrollIndicator={true}   
+                />
+            ) : (null)
+          ))
         }
       </View>
     )
@@ -196,7 +243,7 @@ const Welfare = () => {
       </View>
       
       {renderKeywordCategory()}
-
+      {renderKeywordWelfares()}
       
     </ScrollView>
   )
@@ -262,15 +309,39 @@ const styles = StyleSheet.create({
   },
   keywordCategoryStyle: {
     width: SIZES.width * 0.4,
+    height: 60,
     justifyContent: 'center',
+    borderRadius: 10,
     // height: SIZES.h1,
     marginRight: SIZES.padding,
     marginLeft: SIZES.padding,
     marginTop: 5,
-    borderRadius: 15,
     backgroundColor: COLORS.gray,
     overflow: "hidden",
     alignItems: 'center',
+  },
+
+  KeywordWelfareStyle: {
+    width: SIZES.width * 0.4,
+    height: SIZES.height * 0.3,
+    marginRight: SIZES.padding,
+    marginLeft: SIZES.padding,
+    marginVertical: 10,
+    borderRadius: 10,
+    backgroundColor: COLORS.lightGreen,
+    overflow: "hidden",
+  },
+  KeywordWelfareInnerStyle: {
+    alignItems: 'center',
+    justifyContent: 'center',
+    width: SIZES.width * 0.4,
+    height: SIZES.height * 0.2,
+    // marginRight: SIZES.padding,
+    // marginLeft: SIZES.padding,
+    // marginVertical: SIZES.radius,
+    borderRadius: 10,
+    backgroundColor: COLORS.lightblue,
+    overflow: "hidden",
   },
 })
  

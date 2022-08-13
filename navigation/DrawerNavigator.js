@@ -10,6 +10,7 @@ import {
   AssetAnalysis,
   OldPrepPredict,
   FinanceProduct,
+  NewsScreen,
 } from "../screens";
 import { createDrawerNavigator } from "@react-navigation/drawer";
 import { SettingStackNavigator } from "./SettingStackNavigator";
@@ -88,7 +89,13 @@ const DrawerNavigator = ({ navigation }) => {
         name="AssetAnalysis"
         options={{ title: "AssetAnalysis.js" }}
         component={AssetAnalysis}
-      />    
+      />   
+
+      <Drawer.Screen
+        name="NewsScreen"
+        options={{ title: "NewsScreen.js" }}
+        component={NewsScreen}
+      />     
       
       <Drawer.Screen
         name="NonBenefit"

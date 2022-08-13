@@ -1,10 +1,10 @@
 {
   "expo": {
-    "name": "fintechAppDevelop10",
+    "name": "노후모아",
     "slug": "fintechAppDevelop10",
     "version": "1.0.0",
     "orientation": "portrait",
-    "icon": "./assets/icon.png",
+    "icon": "./assets/nohumoa.png",
     "userInterfaceStyle": "light",
     "splash": {
       "image": "./assets/splash.png",

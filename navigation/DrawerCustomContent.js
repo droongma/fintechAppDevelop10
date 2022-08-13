@@ -109,7 +109,33 @@ export function DrawerCustomContent(props) {
               setActivePage("FinanceProduct");
               props.navigation.navigate("FinanceProduct");
             }}
-          />    
+          />
+
+          <DrawerItem
+            label="노후정책 뉴스"
+            style={
+              activePage === "NewsScreen"
+                ? { backgroundColor: "#CBE9AC" }
+                : { backgroundColor: "#ffffff" }
+            }
+            onPress={() => {
+              setActivePage("NewsScreen");
+              props.navigation.navigate("NewsScreen");
+            }}
+          />   
+
+          <DrawerItem
+            label="설정"
+            style={
+              activePage === "Setting"
+                ? { backgroundColor: "#CBE9AC" }
+                : { backgroundColor: "#ffffff" }
+            }
+            onPress={() => {
+              setActivePage("Setting");
+              props.navigation.navigate("Setting");
+            }}
+          />
 
           <DrawerItem
             label="InfoInput.js입니다"
@@ -124,7 +150,7 @@ export function DrawerCustomContent(props) {
             }}
           />
 
-          <DrawerItem
+          {/* <DrawerItem
             label="NonBenefit.js입니다"
             style={
               activePage === "NonBenefit"
@@ -161,20 +187,7 @@ export function DrawerCustomContent(props) {
               setActivePage("Support");
               props.navigation.navigate("Support");
             }}
-          />
-
-          <DrawerItem
-            label="Setting.js입니다"
-            style={
-              activePage === "Setting"
-                ? { backgroundColor: "#CBE9AC" }
-                : { backgroundColor: "#ffffff" }
-            }
-            onPress={() => {
-              setActivePage("Setting");
-              props.navigation.navigate("Setting");
-            }}
-          />
+          /> */}
 
           <DrawerItem
             style={{
