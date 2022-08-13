@@ -12,6 +12,8 @@ import AssetAnalysis from "./AssetAnalysis";
 import OldPrepPredict from "./OldPrepPredict";
 import OldPrepPredict2 from "./OldPrepPredict2";
 import OldPrepPredict3 from "./OldPrepPredict3";
+import InfoInput from "./InfoInput";
+
 
 export {
   Home,
@@ -28,4 +30,5 @@ export {
   OldPrepPredict,
   OldPrepPredict2,
   OldPrepPredict3,
+  InfoInput,
 };

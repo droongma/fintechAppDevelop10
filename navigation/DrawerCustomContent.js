@@ -45,7 +45,7 @@ export function DrawerCustomContent(props) {
               props.navigation.navigate("Home");
             }}
           />
-          
+
           <DrawerItem
             label="복지혜택 둘러보기"
             style={
@@ -71,7 +71,7 @@ export function DrawerCustomContent(props) {
               props.navigation.navigate("OldPrepPredict");
             }}
           />
-          
+
           <DrawerItem
             label="기초연금 수급자격 확인"
             style={
@@ -97,6 +97,19 @@ export function DrawerCustomContent(props) {
               props.navigation.navigate("AssetAnalysis");
             }}
           />    
+
+          <DrawerItem
+            label="InfoInput.js입니다"
+            style={
+              activePage === "InfoInput"
+                ? { backgroundColor: "#CBE9AC" }
+                : { backgroundColor: "#ffffff" }
+            }
+            onPress={() => {
+              setActivePage("InfoInput");
+              props.navigation.navigate("InfoInput");
+            }}
+          />
 
           <DrawerItem
             label="NonBenefit.js입니다"

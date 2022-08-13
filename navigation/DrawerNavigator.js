@@ -110,6 +110,12 @@ const DrawerNavigator = ({ navigation }) => {
         }}
         component={OldPrepStackNavigator}
       />
+      
+      <Drawer.Screen
+        name="InfoInput"
+        options={{ title: "InfoInput.js" }}
+        component={InfoInput}
+      />
 
       <Drawer.Screen
         name="Alarm"
