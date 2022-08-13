@@ -31,7 +31,7 @@ export default Benefit = ({ navigation }) => {
             alignItems: "center",
             width: 350,
             height: 350,
-            borderRadius: 10,
+            borderRadius: 300,
             borderWidth: 0.5,
             borderColor: "#F5F5F5",
             shadowOpacity: 0.25,
@@ -43,7 +43,7 @@ export default Benefit = ({ navigation }) => {
               alignItems: "center",
               width: 275,
               height: 275,
-              borderRadius: 10,
+              borderRadius: 300,
               borderWidth: 1,
               borderColor: "#F5F5F5",
               shadowOpacity: 0.25,
@@ -55,7 +55,7 @@ export default Benefit = ({ navigation }) => {
                 alignItems: "center",
                 width: 200,
                 height: 200,
-                borderRadius: 10,
+                borderRadius: 100,
                 borderWidth: 2,
                 borderColor: "#F5F5F5",
                 shadowOpacity: 0.25,
@@ -67,7 +67,7 @@ export default Benefit = ({ navigation }) => {
                   alignItems: "center",
                   width: 150,
                   height: 150,
-                  borderRadius: 10,
+                  borderRadius: 100,
                   shadowOpacity: 0.25,
                 }}
                 source={images.beneficiary}
@@ -75,7 +75,7 @@ export default Benefit = ({ navigation }) => {
             </View>
           </View>
         </View>
-              
+
         <Text style={styles.infoText}>
           {`채현님은 기준 소득인정액 이하이므로, 
           만 65세 이상이 되셨을 때,

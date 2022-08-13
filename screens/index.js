@@ -9,6 +9,7 @@ import AlarmScreen from "./AlarmScreen";
 import Benefit from "./Benefit";
 import NonBenefit from "./NonBenefit";
 import IncomeAnalysis from "./IncomeAnalysis";
+import InfoInput from "./InfoInput";
 
 export {
   Home,
@@ -22,4 +23,5 @@ export {
   Benefit,
   NonBenefit,
   IncomeAnalysis,
+  InfoInput,
 };

@@ -88,6 +88,12 @@ const DrawerNavigator = ({ navigation }) => {
       />
 
       <Drawer.Screen
+        name="InfoInput"
+        options={{ title: "InfoInput.js" }}
+        component={InfoInput}
+      />
+
+      <Drawer.Screen
         name="IncomeAnalysis"
         options={{ title: "IncomeAnalysis.js" }}
         component={IncomeAnalysis}

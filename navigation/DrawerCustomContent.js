@@ -45,7 +45,7 @@ export function DrawerCustomContent(props) {
               props.navigation.navigate("Home");
             }}
           />
-          
+
           <DrawerItem
             label="Annuity.js입니다"
             style={
@@ -58,7 +58,7 @@ export function DrawerCustomContent(props) {
               props.navigation.navigate("Annuity");
             }}
           />
-          
+
           <DrawerItem
             label="Benefit.js입니다"
             style={
@@ -82,6 +82,19 @@ export function DrawerCustomContent(props) {
             onPress={() => {
               setActivePage("NonBenefit");
               props.navigation.navigate("NonBenefit");
+            }}
+          />
+
+          <DrawerItem
+            label="InfoInput.js입니다"
+            style={
+              activePage === "InfoInput"
+                ? { backgroundColor: "#CBE9AC" }
+                : { backgroundColor: "#ffffff" }
+            }
+            onPress={() => {
+              setActivePage("InfoInput");
+              props.navigation.navigate("InfoInput");
             }}
           />
 
