@@ -10,6 +10,8 @@ import Benefit from "./Benefit";
 import NonBenefit from "./NonBenefit";
 import AssetAnalysis from "./AssetAnalysis";
 import OldPrepPredict from "./OldPrepPredict";
+import OldPrepPredict2 from "./OldPrepPredict2";
+import OldPrepPredict3 from "./OldPrepPredict3";
 
 export {
   Home,
@@ -24,4 +26,6 @@ export {
   NonBenefit,
   AssetAnalysis,
   OldPrepPredict,
+  OldPrepPredict2,
+  OldPrepPredict3,
 };

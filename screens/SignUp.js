@@ -18,11 +18,13 @@ import { LinearGradient } from "expo-linear-gradient";
 import { COLORS, SIZES, FONTS, icons, images } from "../constants";
 import { RenderHeader } from "../components";
 import { NavigationContainer } from "@react-navigation/native";
+import { useGlobalState } from "../GlobalState/GlobalStates";
 
 const { width: SCREEN_WIDTH, height: SCREEN_HEIGHT } = Dimensions.get("window");
 
 // KeyboardAvoidingView : TextInput이 포커스 되었을 때 keyboard가 올라오며 가리는 현상을 방지
 const SignUp = ({ navigation }) => {
+  const [activePage, setActivePage] = useGlobalState("activePage");
   const [showPassword, setShowPassword] = React.useState(false);
   const [areas, setAreas] = React.useState([]);
   const [selectedArea, setSelectedArea] = React.useState(null);
@@ -131,6 +133,7 @@ const SignUp = ({ navigation }) => {
     return (
       <View
         style={{
+          
           marginTop: SIZES.padding,
           height: 100,
           alignItems: "center",
@@ -138,10 +141,12 @@ const SignUp = ({ navigation }) => {
         }}
       >
         <Image
-          source={images.wallieLogo}
-          resizeMode="contain"
+          // backgroundColor= 'rgba(52, 52, 52, 0.8)'
+          source={images.nohu_logo}
+          resizeMode="stretch"
           style={{
             width: "60%",
+            
           }}
         />
       </View>
@@ -304,7 +309,10 @@ const SignUp = ({ navigation }) => {
             justifyContent: "center",
           }}
           // onPress={() => navigation.navigate("Home")}
-          onPress={() => navigation.navigate("HomeStack")}
+          onPress={() => {
+            navigation.navigate("HomeStack");
+            setActivePage("Home");
+          }}
         >
           <Text style={{ color: COLORS.white, ...FONTS.h3 }}>시작하기</Text>
         </TouchableOpacity>

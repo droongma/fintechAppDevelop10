@@ -39,7 +39,7 @@ const Home = ({navigation}) => {
               alignItems: "center",
               width: 250,
               height: 250,
-              borderRadius: 10,
+              borderRadius: 20,
               borderWidth: 20,
               borderColor: "#4960F9",
             }}

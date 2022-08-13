@@ -17,6 +17,7 @@ import { Button, Image } from "react-native";
 import { TouchableOpacity } from "react-native-gesture-handler";
 import { createStackNavigator } from "@react-navigation/stack";
 import { DrawerCustomContent } from "./DrawerCustomContent";
+import { OldPrepStackNavigator } from "./OldPrepStackNavigator";
 
 const Drawer = createDrawerNavigator();
 const Stack = createStackNavigator();
@@ -94,12 +95,20 @@ const DrawerNavigator = ({ navigation }) => {
         component={NonBenefit}
       />
 
-      
-
-    <Drawer.Screen
+      <Drawer.Screen
         name="OldPrepPredict"
-        options={{ title: "OldPrepPredict.js" }}
+        options={{ title: "OldPrepPredict.js",  }}
         component={OldPrepPredict}
+      />
+
+      <Drawer.Screen
+        name="OldPrepPredict2"
+        options={{
+          // Alarm 항목은 drawer에 안보이게 함. 오른쪽 위의 아이콘 클릭으로만 접근 가능
+          drawerItemStyle: { height: 0 },
+          headerShown: false,
+        }}
+        component={OldPrepStackNavigator}
       />
 
       <Drawer.Screen

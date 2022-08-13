@@ -157,9 +157,20 @@ export function DrawerCustomContent(props) {
             }}
             label="AlarmScreen.js입니다"
             onPress={() => {
-              props.navigation.navigate("Alarm");
+              // props.navigation.navigate("Alarm");
             }}
           />
+
+          <DrawerItem
+            style={{
+              height: 0,
+              headerShown: false,
+            }}
+            label="OldPrepPredict2.js입니다"
+            onPress={() => {
+              // props.navigation.navigate("OldPrepPredict2");
+            }}
+          />    
         </Drawer.Section>
       </DrawerContentScrollView>
     </View>

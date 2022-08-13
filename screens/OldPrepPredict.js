@@ -11,8 +11,10 @@ import { COLORS, SIZES, FONTS, icons, images } from "../constants"
 import { useHeaderHeight } from '@react-navigation/elements';
 import { BgGradShape } from "../shape";
 import FontAwesome from "@expo/vector-icons/FontAwesome";
+import { useGlobalState } from "../GlobalState/GlobalStates";
 
 const OldPrepPredict = ({navigation}) => {
+    const [activePage, setActivePage] = useGlobalState("activePage");
     const headerHeight = useHeaderHeight();
     return (
         <ScrollView showsVerticalScrollIndicator={true}>
