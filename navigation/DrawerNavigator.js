@@ -1,13 +1,14 @@
 import React from "react";
 import {
   AlarmScreen,
-  Annuity,
+  Welfare,
   Etc,
   Home,
   Support,
   Benefit,
   NonBenefit,
-  IncomeAnalysis,
+  AssetAnalysis,
+  OldPrepPredict,
 } from "../screens";
 import { createDrawerNavigator } from "@react-navigation/drawer";
 import { SettingStackNavigator } from "./SettingStackNavigator";
@@ -66,9 +67,9 @@ const DrawerNavigator = ({ navigation }) => {
       />
 
       <Drawer.Screen
-        name="Annuity"
-        options={{ title: "Annuity.js" }}
-        component={Annuity}
+        name="Welfare"
+        options={{ title: "Welfare.js" }}
+        component={Welfare}
       />
 
       <Drawer.Screen name="Etc" options={{ title: "Etc.js" }} component={Etc} />
@@ -82,15 +83,23 @@ const DrawerNavigator = ({ navigation }) => {
       />
 
       <Drawer.Screen
+        name="AssetAnalysis"
+        options={{ title: "AssetAnalysis.js" }}
+        component={AssetAnalysis}
+      />    
+      
+      <Drawer.Screen
         name="NonBenefit"
         options={{ title: "NonBenefit.js" }}
         component={NonBenefit}
       />
 
-      <Drawer.Screen
-        name="IncomeAnalysis"
-        options={{ title: "IncomeAnalysis.js" }}
-        component={IncomeAnalysis}
+      
+
+    <Drawer.Screen
+        name="OldPrepPredict"
+        options={{ title: "OldPrepPredict.js" }}
+        component={OldPrepPredict}
       />
 
       <Drawer.Screen

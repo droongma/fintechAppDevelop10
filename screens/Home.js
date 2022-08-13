@@ -5,11 +5,12 @@ import { LinearGradient } from "expo-linear-gradient";
 import { COLORS, SIZES, FONTS, icons, images } from "../constants";
 import { useHeaderHeight } from "@react-navigation/elements";
 import { useGlobalState } from "../GlobalState/GlobalStates";
+// import { useGlobalState } from "../GlobalState/GlobalStates";
 
-const Home = () => {
+const Home = ({navigation}) => {
   const headerHeight = useHeaderHeight();
-  // const [activePage, setActivepage] = useGlobalState('activePage');
-  // if (activePage === "Home") setActivepage("sda");
+  const [activePage, setActivepage] = useGlobalState('activePage');
+
   return (
     <ScrollView style={{ flex: 1 }}>
       <LinearGradient
@@ -57,7 +58,11 @@ const Home = () => {
         </View>
       </LinearGradient>
 
-      <TouchableOpacity style={styles.goCheck}>
+      <TouchableOpacity style={styles.goCheck}
+         onPress={()=>{
+          navigation.navigate("Benefit")
+          setActivepage("Benefit")
+          }}>
         <Text style={styles.checkText}>{`기초연금 수금자격 확인하러가기`}</Text>
       </TouchableOpacity>
     </ScrollView>
