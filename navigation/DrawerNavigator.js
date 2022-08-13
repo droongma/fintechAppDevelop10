@@ -9,6 +9,7 @@ import {
   NonBenefit,
   AssetAnalysis,
   OldPrepPredict,
+  FinanceProduct,
 } from "../screens";
 import { createDrawerNavigator } from "@react-navigation/drawer";
 import { SettingStackNavigator } from "./SettingStackNavigator";
@@ -102,6 +103,12 @@ const DrawerNavigator = ({ navigation }) => {
       />
 
       <Drawer.Screen
+        name="FinanceProduct"
+        options={{ title: "FinanceProduct.js",  }}
+        component={FinanceProduct}
+      />
+
+      <Drawer.Screen
         name="OldPrepPredict2"
         options={{
           // Alarm 항목은 drawer에 안보이게 함. 오른쪽 위의 아이콘 클릭으로만 접근 가능
@@ -110,7 +117,7 @@ const DrawerNavigator = ({ navigation }) => {
         }}
         component={OldPrepStackNavigator}
       />
-      
+
       <Drawer.Screen
         name="InfoInput"
         options={{ title: "InfoInput.js" }}

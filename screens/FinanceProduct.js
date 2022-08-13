@@ -32,44 +32,10 @@ const FinanceProduct = ({ navigation }) => {
                 start={{ x: 0, y: 0 }}
                 end={{ x: 0.5, y: 1 }}
             />
-            <View style={{ marginTop: headerHeight, }}>
-                <TouchableOpacity
-                    style={{
-                        flexDirection: "row",
-                        alignItems: "center", // 각 자식 아이템들이 가운데 높이에 위치하도록 정렬
-                        paddingHorizontal: SIZES.padding * 2,
-                        marginTop:  SIZES.padding * 4,
-                    }}
-                    // onPress={() => {navigation.navigate("Home")}}
-                    onPress={() => {
-                        navigation.goBack();
-                    }}
-                >
-                    <Image
-                        source={icons.back} // 백버튼
-                        resizeMode="contain" // 가로와 세로 중 넓은 부분이 100%를 차지할 때까지만 이미지를 늘림
-                        style={{
-                            width: 20,
-                            height: 20,
-                            tintColor: COLORS.black,
-                        }}
-                    />
-
-                    <Text
-                        style={{
-                            marginLeft: SIZES.padding * 1.5,
-                            color: COLORS.black,
-                            ...FONTS.h4,
-                        }}
-                    >
-                        이전으로
-                    </Text>
-                </TouchableOpacity>
-            </View>
 
             <View>
                 <Text style={{
-                    marginTop: 10,
+                    marginTop: SIZES.padding * 8,
                     fontFamily: "Roboto-Bold",
                     fontSize: SIZES.h1,
                     lineHeight: 35,
@@ -77,49 +43,44 @@ const FinanceProduct = ({ navigation }) => {
                     marginHorizontal: SIZES.width * 0.15,
                     textAlign: 'center',
                 }}>
-                    채현님의 노후 대비율 9.8%
+                    채현님께 추천드리는 금융상품
                 </Text>
                 <View style={{ ...styleSheet.whiteBox }}>
                     <ImageBackground
-                        source={images.oldprep3}
+                        source={images.finance_product1}
                         resizeMode="contain"
-                        imageStyle={{ borderRadius: 50 }}
+                        imageStyle={{ borderRadius: 15 }}
                         style={{ flex: 1, }}
                     >
                     </ImageBackground>
                 </View>
             </View>
-            <View style={{ marginTop: 5, }}>
+            <View style={{ marginTop: 10, }}>
                 <Text style={{
                     ...FONTS.h2,
                     color: COLORS.blue,
                     textAlign: 'center',
                 }}>
-                    풍요로운 노후를 위해 필요한 돈
+                    금융상품을 더 확인하고 싶으면
                 </Text>
                 <Text style={{
-                    ...FONTS.h4,
+                    ...FONTS.h2,
+                    color: COLORS.blue,
                     textAlign: 'center',
-                    marginTop: 5,
                 }}>
-                    = 3억 5천 112만원
+                    클릭하세요!
                 </Text>
             </View>
-            <View style={{ marginTop: 5, }}>
-                <Text style={{
-                    ...FONTS.h2,
-                    color: COLORS.blue,
-                    textAlign: 'center',
-                }}>
-                    채현님이 준비한 노후자금
+
+            <View style={{
+                paddingVertical: 5,
+                borderRadius: 15, backgroundColor: "#d8d8e8",
+                alignSelf: "center", marginTop: 10
+            }}>
+                <Text style={{ ...FONTS.body4, color: 'black', textAlign: 'center', marginHorizontal: 10 }}>
+                    바로 확인하러 가기
                 </Text>
-                <Text style={{
-                    ...FONTS.h4,
-                    textAlign: 'center',
-                    marginTop: 5,
-                }}>
-                    = 3천 432만원
-                </Text>
+
             </View>
 
             <View style={{
@@ -152,7 +113,7 @@ const FinanceProduct = ({ navigation }) => {
                         navigation.navigate("Home");
                     }}
                 >
-                    풍요로운 미래를 준비하러 가기!
+                    홈으로
                 </FontAwesome.Button>
             </View>
         </ScrollView>
@@ -166,7 +127,7 @@ const styleSheet = StyleSheet.create({
         height: SIZES.height * 0.3,
         marginTop: 20,
         paddingVertical: 10,
-        borderRadius: 35,
+        borderRadius: 5,
         backgroundColor: "white",
         alignSelf: "center"
     }

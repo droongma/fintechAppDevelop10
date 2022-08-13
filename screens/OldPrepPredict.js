@@ -121,7 +121,6 @@ const OldPrepPredict = ({navigation}) => {
                     // backgroundColor="rgba(0,0,0,0)"
                     marginHorizontal={10}
                     onPress={() => {
-                        setActivePage("OldPrepPredict2");
                         navigation.navigate("OldPrepPredict2");
                     }}
                 >

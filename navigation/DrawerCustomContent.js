@@ -99,6 +99,19 @@ export function DrawerCustomContent(props) {
           />    
 
           <DrawerItem
+            label="추천 금융상품"
+            style={
+              activePage === "FinanceProduct"
+                ? { backgroundColor: "#CBE9AC" }
+                : { backgroundColor: "#ffffff" }
+            }
+            onPress={() => {
+              setActivePage("FinanceProduct");
+              props.navigation.navigate("FinanceProduct");
+            }}
+          />    
+
+          <DrawerItem
             label="InfoInput.js입니다"
             style={
               activePage === "InfoInput"

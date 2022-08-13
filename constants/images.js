@@ -9,6 +9,8 @@ const oldprep1 = require("../assets/images/oldprep1.png");
 const oldprep2 = require("../assets/images/oldprep2.png");
 const oldprep3 = require("../assets/images/oldprep3.png");
 const nohu_logo = require("../assets/images/nohu_logo.png");
+const mydata_agree = require("../assets/images/mydata_agree.png");
+const finance_product1 = require("../assets/images/finance_product1.png");
 
 // Dummy
 const usFlag = require("../assets/images/us-flag.jpg");
@@ -25,6 +27,8 @@ export default {
     oldprep2,
     oldprep3,
     nohu_logo,
+    mydata_agree,
+    finance_product1,
 
     // Dummy
     usFlag,

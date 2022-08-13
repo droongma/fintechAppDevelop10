@@ -13,7 +13,10 @@ const chartConfig = {
     color: (opacity = 0.8) => `rgba(26, 255, 146, ${opacity})`,
     strokeWidth: 2, // optional, default 3
     // barPercentage: 0.2,
-    useShadowColorFromDataset: false // optional
+    useShadowColorFromDataset: false, // optional
+    style:{
+      innerWidth: 100,
+    }
   };
 
 const data = [
@@ -60,7 +63,7 @@ const AssetPieChart = () => {
             <PieChart
                 data={data}
                 width={SIZES.width }
-                height={SIZES.height * 0.4}
+                height={SIZES.height * 0.2}
                 chartConfig={chartConfig}
                 accessor={"population"}
                 backgroundColor={"transparent"}

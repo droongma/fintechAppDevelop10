@@ -38,7 +38,7 @@ const OldPrepPredict3 = ({ navigation }) => {
                         flexDirection: "row",
                         alignItems: "center", // 각 자식 아이템들이 가운데 높이에 위치하도록 정렬
                         paddingHorizontal: SIZES.padding * 2,
-                        marginTop:  SIZES.padding * 4,
+                        marginTop:  SIZES.padding * 6,
                     }}
                     // onPress={() => {navigation.navigate("Home")}}
                     onPress={() => {
@@ -51,14 +51,14 @@ const OldPrepPredict3 = ({ navigation }) => {
                         style={{
                             width: 20,
                             height: 20,
-                            tintColor: COLORS.black,
+                            tintColor: COLORS.lightyellow,
                         }}
                     />
 
                     <Text
                         style={{
                             marginLeft: SIZES.padding * 1.5,
-                            color: COLORS.black,
+                            color: COLORS.lightyellow,
                             ...FONTS.h4,
                         }}
                     >
