@@ -2,26 +2,36 @@ import Home from "./Home";
 import SignUp from "./SignUp";
 import Support from "./Support";
 import Setting from "./Setting";
-import Annuity from "./Annuity";
+import Welfare from "./Welfare";
 import Navtest from "./Navtest";
 import Etc from "./Etc";
 import AlarmScreen from "./AlarmScreen";
 import Benefit from "./Benefit";
 import NonBenefit from "./NonBenefit";
-import IncomeAnalysis from "./IncomeAnalysis";
+import AssetAnalysis from "./AssetAnalysis";
+import OldPrepPredict from "./OldPrepPredict";
+import OldPrepPredict2 from "./OldPrepPredict2";
+import OldPrepPredict3 from "./OldPrepPredict3";
 import InfoInput from "./InfoInput";
+import FinanceProduct from "./FinanceProduct";
+import NewsScreen from "./NewsScreen";
 
 export {
   Home,
   SignUp,
   Support,
-  Annuity,
+  Welfare,
   Setting,
   Navtest,
   Etc,
   AlarmScreen,
   Benefit,
   NonBenefit,
-  IncomeAnalysis,
+  AssetAnalysis,
+  OldPrepPredict,
+  OldPrepPredict2,
+  OldPrepPredict3,
   InfoInput,
+  FinanceProduct,
+  NewsScreen,
 };

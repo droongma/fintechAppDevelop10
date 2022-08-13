@@ -81,7 +81,13 @@ export default Benefit = ({ navigation }) => {
           만 65세 이상이 되셨을 때,
           기초연금 수급자격자입니다!`}
         </Text>
-        <TouchableOpacity style={styles.analyButton}>
+        <TouchableOpacity 
+          style={styles.analyButton}
+          onPress={()=>{
+            navigation.navigate("AssetAnalysis");
+            setActivePage("AssetAnalysis");
+          }}
+          >
           <LinearGradient
             colors={["#6E64D4", "#5AA9FC"]}
             start={{ x: 0, y: 0 }}
@@ -89,13 +95,18 @@ export default Benefit = ({ navigation }) => {
             borderRadius={25}
             padding={10}
           >
-            <Text style={styles.textColor}>
+            <Text style={{...styles.textColor}}>
               채현님의 자산 분석 리포트 보러가기
             </Text>
           </LinearGradient>
         </TouchableOpacity>
 
-        <TouchableOpacity style={styles.analyButton}>
+        <TouchableOpacity 
+          style={styles.analyButton}
+          onPress={()=>{
+            navigation.navigate("OldPrepPredict");
+            setActivePage("OldPrepPredict");
+          }}>
           <LinearGradient
             colors={["#6E64D4", "#5AA9FC"]}
             start={{ x: 0, y: 0 }}
@@ -138,6 +149,7 @@ const styles = StyleSheet.create({
       height: 3,
     },
     padding: 10,
+    marginVertical: 15,
     alignItems: "center",
   },
   textColor: {

@@ -5,7 +5,7 @@ import { COLORS, SIZES, FONTS, icons, images } from "../constants"
 import { LinearGradient } from "expo-linear-gradient";
 import { useHeaderHeight } from "@react-navigation/elements";
 
-const Annuity = () => {
+const Welfare = () => {
 
   const ment = "채연님에게 적합한 \n다양한 복지 혜택을 둘러보세요.";
   const keyword = "키워드 🎈";
@@ -72,13 +72,13 @@ const Annuity = () => {
             <View style={{flex: 3, paddingTop: 10}}>
                 <ScrollView horizontal>
                   <View contentContainerStyle style={styles.card2}>
-                      <Text style={styles.text}>card test</Text>
+                      <Text style={styles.text}>장애수당</Text>
                   </View>
                   <View contentContainerStyle style={styles.card2}>
-                      <Text style={styles.text}>card test</Text>
+                      <Text style={styles.text}>대중교통 요금할인</Text>
                   </View> 
                   <View contentContainerStyle style={styles.card2}>
-                      <Text style={styles.text}>card test</Text>
+                      <Text style={styles.text}>장애인 의료비 지원</Text>
                   </View>
               </ScrollView> 
           
@@ -192,9 +192,9 @@ const styles = StyleSheet.create({
     marginLeft: 10,
     marginRight: 10,
     marginBottom: 10,
-    
+    width: SIZES.width* 0.6,
   }
 });
 
 
-export default Annuity;
+export default Welfare;

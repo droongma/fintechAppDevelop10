@@ -9,11 +9,12 @@ import { COLORS, SIZES, FONTS, icons, images } from "../constants"
 import { useHeaderHeight } from '@react-navigation/elements';
 import { useGlobalState } from "../GlobalState/GlobalStates";
 import { LinearGradient } from "expo-linear-gradient";
+import { AssetPieChart } from "../components";
 
-const IncomeAnalysis = () => {
+const AssetAnalysis = () => {
     const headerHeight = useHeaderHeight();
     return (
-        <View style={{
+        <ScrollView style={{
             flex: 1,
             marginTop: headerHeight + 10,
         }}>
@@ -42,9 +43,26 @@ const IncomeAnalysis = () => {
                     <Text style={{...FONTS.h3, marginHorizontal: 15, marginTop: 15}}>
                                 채현님의 현재 소득인정액 구성자산
                     </Text>
+                    <AssetPieChart />
                 </View>
+                <View style={{ width : SIZES.width * 0.9,  paddingVertical: 15,
+                        borderRadius: 15, backgroundColor: "#d8d8e8", alignSelf: "center" }}>
+                    <Text style={{...FONTS.body3, color: 'black', marginHorizontal: 15}}>
+                        <Text>채현님의 차량 가액이 </Text>
+                        <Text style={{...FONTS.h3,}}>4000만원 </Text>
+                        <Text>이상으로 </Text>
+                        <Text style={{...FONTS.h3,}}>고급자동차</Text>    
+                        <Text>
+                            로 인정되므로, 현재 소유하신 차량을 
+                            자녀분께 증여 또는 매각하시는 것을 추천드립니다!
+                        </Text>
+                        
+                    </Text>
+                    
+                </View>
+                
             </View>
-        </View>
+        </ScrollView>
     )
 }
 
@@ -81,4 +99,4 @@ const style = StyleSheet.create({
     },
 })
 
-export default IncomeAnalysis;
+export default AssetAnalysis;

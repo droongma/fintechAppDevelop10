@@ -34,7 +34,7 @@ export function DrawerCustomContent(props) {
         {/* Drawer 메뉴 표시 */}
         <Drawer.Section style={{ flex: 1, marginTop: 15 }}>
           <DrawerItem
-            label="Home.js입니다"
+            label="홈 화면"
             style={
               activePage === "Home"
                 ? { backgroundColor: "#CBE9AC" }
@@ -47,20 +47,33 @@ export function DrawerCustomContent(props) {
           />
 
           <DrawerItem
-            label="Annuity.js입니다"
+            label="복지혜택 둘러보기"
             style={
-              activePage === "Annuity"
+              activePage === "Welfare"
                 ? { backgroundColor: "#CBE9AC" }
                 : { backgroundColor: "#ffffff" }
             }
             onPress={() => {
-              setActivePage("Annuity");
-              props.navigation.navigate("Annuity");
+              setActivePage("Welfare");
+              props.navigation.navigate("Welfare");
             }}
           />
 
           <DrawerItem
-            label="Benefit.js입니다"
+            label="노후 대비율 예측해보기"
+            style={
+              activePage === "OldPrepPredict"
+                ? { backgroundColor: "#CBE9AC" }
+                : { backgroundColor: "#ffffff" }
+            }
+            onPress={() => {
+              setActivePage("OldPrepPredict");
+              props.navigation.navigate("OldPrepPredict");
+            }}
+          />
+
+          <DrawerItem
+            label="기초연금 수급자격 확인"
             style={
               activePage === "Benefit"
                 ? { backgroundColor: "#CBE9AC" }
@@ -73,15 +86,54 @@ export function DrawerCustomContent(props) {
           />
 
           <DrawerItem
-            label="NonBenefit.js입니다"
+            label="자산분석 보고서"
             style={
-              activePage === "NonBenefit"
+              activePage === "AssetAnalysis"
                 ? { backgroundColor: "#CBE9AC" }
                 : { backgroundColor: "#ffffff" }
             }
             onPress={() => {
-              setActivePage("NonBenefit");
-              props.navigation.navigate("NonBenefit");
+              setActivePage("AssetAnalysis");
+              props.navigation.navigate("AssetAnalysis");
+            }}
+          />    
+
+          <DrawerItem
+            label="추천 금융상품"
+            style={
+              activePage === "FinanceProduct"
+                ? { backgroundColor: "#CBE9AC" }
+                : { backgroundColor: "#ffffff" }
+            }
+            onPress={() => {
+              setActivePage("FinanceProduct");
+              props.navigation.navigate("FinanceProduct");
+            }}
+          />
+
+          <DrawerItem
+            label="노후정책 뉴스"
+            style={
+              activePage === "NewsScreen"
+                ? { backgroundColor: "#CBE9AC" }
+                : { backgroundColor: "#ffffff" }
+            }
+            onPress={() => {
+              setActivePage("NewsScreen");
+              props.navigation.navigate("NewsScreen");
+            }}
+          />   
+
+          <DrawerItem
+            label="설정"
+            style={
+              activePage === "Setting"
+                ? { backgroundColor: "#CBE9AC" }
+                : { backgroundColor: "#ffffff" }
+            }
+            onPress={() => {
+              setActivePage("Setting");
+              props.navigation.navigate("Setting");
             }}
           />
 
@@ -98,16 +150,16 @@ export function DrawerCustomContent(props) {
             }}
           />
 
-          <DrawerItem
-            label="IncomeAnalysis.js입니다"
+          {/* <DrawerItem
+            label="NonBenefit.js입니다"
             style={
-              activePage === "IncomeAnalysis"
+              activePage === "NonBenefit"
                 ? { backgroundColor: "#CBE9AC" }
                 : { backgroundColor: "#ffffff" }
             }
             onPress={() => {
-              setActivePage("IncomeAnalysis");
-              props.navigation.navigate("IncomeAnalysis");
+              setActivePage("NonBenefit");
+              props.navigation.navigate("NonBenefit");
             }}
           />
 
@@ -135,20 +187,7 @@ export function DrawerCustomContent(props) {
               setActivePage("Support");
               props.navigation.navigate("Support");
             }}
-          />
-
-          <DrawerItem
-            label="Setting.js입니다"
-            style={
-              activePage === "Setting"
-                ? { backgroundColor: "#CBE9AC" }
-                : { backgroundColor: "#ffffff" }
-            }
-            onPress={() => {
-              setActivePage("Setting");
-              props.navigation.navigate("Setting");
-            }}
-          />
+          /> */}
 
           <DrawerItem
             style={{
@@ -157,9 +196,20 @@ export function DrawerCustomContent(props) {
             }}
             label="AlarmScreen.js입니다"
             onPress={() => {
-              props.navigation.navigate("Alarm");
+              // props.navigation.navigate("Alarm");
             }}
           />
+
+          <DrawerItem
+            style={{
+              height: 0,
+              headerShown: false,
+            }}
+            label="OldPrepPredict2.js입니다"
+            onPress={() => {
+              // props.navigation.navigate("OldPrepPredict2");
+            }}
+          />    
         </Drawer.Section>
       </DrawerContentScrollView>
     </View>

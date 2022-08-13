@@ -15,7 +15,7 @@ import { BgGradShape } from "../shape";
 import FontAwesome from "@expo/vector-icons/FontAwesome";
 import { useGlobalState } from "../GlobalState/GlobalStates";
 
-const Home = ({ navigation }) => {
+const OldPrepPredict2 = ({ navigation }) => {
     const [activePage, setActivePage] = useGlobalState("activePage");
     const headerHeight = useHeaderHeight();
     return (
@@ -32,10 +32,44 @@ const Home = ({ navigation }) => {
                 start={{ x: 0, y: 0 }}
                 end={{ x: 0.5, y: 1 }}
             />
+            <View style={{ marginTop: headerHeight, }}>
+                <TouchableOpacity
+                    style={{
+                        flexDirection: "row",
+                        alignItems: "center", // 각 자식 아이템들이 가운데 높이에 위치하도록 정렬
+                        paddingHorizontal: SIZES.padding * 2,
+                        marginTop:  SIZES.padding * 6,
+                    }}
+                    // onPress={() => {navigation.navigate("Home")}}
+                    onPress={() => {
+                        navigation.goBack();
+                    }}
+                >
+                    <Image
+                        source={icons.back} // 백버튼
+                        resizeMode="contain" // 가로와 세로 중 넓은 부분이 100%를 차지할 때까지만 이미지를 늘림
+                        style={{
+                            width: 20,
+                            height: 20,
+                            tintColor: COLORS.lightyellow,
+                        }}
+                    />
+
+                    <Text
+                        style={{
+                            marginLeft: SIZES.padding * 1.5,
+                            color: COLORS.lightyellow,
+                            ...FONTS.h4,
+                        }}
+                    >
+                        이전으로
+                    </Text>
+                </TouchableOpacity>
+            </View>
 
             <View>
                 <Text style={{
-                    marginTop: headerHeight,
+                    marginTop: 10,
                     fontFamily: "Roboto-Bold",
                     fontSize: SIZES.h1,
                     lineHeight: 35,
@@ -51,9 +85,9 @@ const Home = ({ navigation }) => {
                 }} activeOpacity={1}>
                     <View style={{ ...styleSheet.whiteBox }}>
                         <ImageBackground
-                            source={images.mydata_agree}
+                            source={images.oldprep2}
                             resizeMode="contain"
-                            imageStyle={{ borderRadius: 30 }}
+                            imageStyle={{ borderRadius: 50 }}
                             style={{ flex: 1, }}
                         >
                         </ImageBackground>
@@ -65,9 +99,31 @@ const Home = ({ navigation }) => {
                 marginTop: 10,
                 alignItems: 'center', 
                 justifyContent: 'center',
+            }}>
+                <FontAwesome.Button
+                    // name="paypal"
+                    color="white"
+                    size={30}
+                    padding={5}
+                    borderRadius={10}
+                    backgroundColor="#6e64d4"
+                    // backgroundColor="rgba(0,0,0,0)"
+                    marginHorizontal={10}
+                    onPress={() => {
+                        setActivePage("OldPrepPredict3");
+                        navigation.navigate("OldPrepPredict3");
+                    }}
+                >
+                    클릭하여 상세조회하기
+                </FontAwesome.Button>
+            </View>
+            <View style={{
+                marginTop: 10,
+                alignItems: 'center', 
+                justifyContent: 'center',
             }}>            
                 <FontAwesome.Button
-                    name="location-arrow"
+                    name="paypal"
                     color="white"
                     size={40}
                     padding={10}
@@ -75,12 +131,12 @@ const Home = ({ navigation }) => {
                     backgroundColor="#6e64d4"
                     // backgroundColor="rgba(0,0,0,0)"
                     marginHorizontal={10}
-                    onPress={() => { // 기초연금 수급자격 조회 화면으로 이동
-                        setActivePage("Benefit");
-                        navigation.navigate("Benefit");
+                    onPress={() => {
+                        setActivePage("FinanceProduct");
+                        navigation.navigate("FinanceProduct");
                     }}
                 >
-                    기초연금 수급자격 확인하러 가기
+                    채현님께 추천하는 금융상품 보러가기
                 </FontAwesome.Button>
             </View>
         </ScrollView>
@@ -90,8 +146,8 @@ const Home = ({ navigation }) => {
 const styleSheet = StyleSheet.create({
 
     whiteBox: {
-        width: SIZES.width * 0.7,
-        height: SIZES.height * 0.5,
+        width: SIZES.width * 0.6,
+        height: SIZES.height * 0.4,
         marginTop: 20,
         paddingVertical: 10,
         borderRadius: 35,
@@ -101,4 +157,4 @@ const styleSheet = StyleSheet.create({
 
 });
 
-export default Home;
+export default OldPrepPredict2;

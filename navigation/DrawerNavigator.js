@@ -1,13 +1,16 @@
 import React from "react";
 import {
   AlarmScreen,
-  Annuity,
+  Welfare,
   Etc,
   Home,
   Support,
   Benefit,
   NonBenefit,
-  IncomeAnalysis,
+  AssetAnalysis,
+  OldPrepPredict,
+  FinanceProduct,
+  NewsScreen,
 } from "../screens";
 import { createDrawerNavigator } from "@react-navigation/drawer";
 import { SettingStackNavigator } from "./SettingStackNavigator";
@@ -16,6 +19,7 @@ import { Button, Image } from "react-native";
 import { TouchableOpacity } from "react-native-gesture-handler";
 import { createStackNavigator } from "@react-navigation/stack";
 import { DrawerCustomContent } from "./DrawerCustomContent";
+import { OldPrepStackNavigator } from "./OldPrepStackNavigator";
 
 const Drawer = createDrawerNavigator();
 const Stack = createStackNavigator();
@@ -66,9 +70,9 @@ const DrawerNavigator = ({ navigation }) => {
       />
 
       <Drawer.Screen
-        name="Annuity"
-        options={{ title: "Annuity.js" }}
-        component={Annuity}
+        name="Welfare"
+        options={{ title: "Welfare.js" }}
+        component={Welfare}
       />
 
       <Drawer.Screen name="Etc" options={{ title: "Etc.js" }} component={Etc} />
@@ -82,21 +86,49 @@ const DrawerNavigator = ({ navigation }) => {
       />
 
       <Drawer.Screen
+        name="AssetAnalysis"
+        options={{ title: "AssetAnalysis.js" }}
+        component={AssetAnalysis}
+      />   
+
+      <Drawer.Screen
+        name="NewsScreen"
+        options={{ title: "NewsScreen.js" }}
+        component={NewsScreen}
+      />     
+      
+      <Drawer.Screen
         name="NonBenefit"
         options={{ title: "NonBenefit.js" }}
         component={NonBenefit}
       />
 
       <Drawer.Screen
-        name="InfoInput"
-        options={{ title: "InfoInput.js" }}
-        component={InfoInput}
+        name="OldPrepPredict"
+        options={{ title: "OldPrepPredict.js",  }}
+        component={OldPrepPredict}
       />
 
       <Drawer.Screen
-        name="IncomeAnalysis"
-        options={{ title: "IncomeAnalysis.js" }}
-        component={IncomeAnalysis}
+        name="FinanceProduct"
+        options={{ title: "FinanceProduct.js",  }}
+        component={FinanceProduct}
+      />
+
+      <Drawer.Screen
+        name="OldPrepPredict2"
+        options={{
+          // Alarm 항목은 drawer에 안보이게 함. 오른쪽 위의 아이콘 클릭으로만 접근 가능
+          drawerItemStyle: { height: 0 },
+          headerShown: false,
+        }}
+        component={OldPrepStackNavigator}
+      />
+
+      <Drawer.Screen
+        name="InfoInput"
+        options={{ title: "InfoInput.js" }}
+        component={InfoInput}
       />
 
       <Drawer.Screen

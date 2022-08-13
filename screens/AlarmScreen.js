@@ -38,7 +38,7 @@ const AlarmScreen = ({ navigation }) => {
             ...FONTS.h4,
           }}
         >
-          홈으로
+          이전으로
         </Text>
       </TouchableOpacity>
 
@@ -50,12 +50,12 @@ const AlarmScreen = ({ navigation }) => {
           // paddingHorizontal: SIZES.padding * 2
         }}
       >
-        <Text>새로운 화면에서, AlarmScreen.js의 내용 표시</Text>
+        <Text style={{...FONTS.h2, marginBottom: 10,}}>현재 새로운 알람이 없습니다!</Text>
         <Button
           onPress={() => {
             navigation.goBack();
           }}
-          title="홈 화면으로 돌아가기"
+          title="이전 화면으로 돌아가기"
         >
           {" "}
         </Button>
