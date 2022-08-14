@@ -80,7 +80,7 @@ const RetireInvestTop = () => {
           <Text style={{...FONTS.h2, textAlign: 'center', marginHorizontal: 25, color: 'black',  }}>
             최근 5영업일간 유입이 가장 많은 투자상품 <Text style={{color: 'red'}}>Top 5</Text>는?
           </Text> 
-          <Image style={{alignSelf: 'center', width: SIZES.width * 0.6, resizeMode: 'contain'}} source={images.invest_logo1}/>
+          <Image style={{alignSelf: 'center', height: SIZES.height * 0.15, resizeMode: 'contain'}} source={images.invest_logo1}/>
       </View>
       <ScrollView>
           {topData.map((data, index) => (
