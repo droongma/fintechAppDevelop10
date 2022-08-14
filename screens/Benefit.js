@@ -11,12 +11,12 @@ export default Benefit = ({ navigation }) => {
   const [activePage, setActivePage] = useGlobalState("activePage"); // global state
   const headerHeight = useHeaderHeight();
   return (
-    <LinearGradient
-      colors={["#36D1DC", "#5B86E5"]}
-      style={{ flex: 1 }}
-      start={{ x: 0, y: 0 }}
-      end={{ x: 1, y: 0 }}
-    >
+    // <LinearGradient
+    //   colors={["#36D1DC", "#5B86E5"]}
+    //   style={{ flex: 1 }}
+    //   start={{ x: 0, y: 0 }}
+    //   end={{ x: 1, y: 0 }}
+    // >
       <View
         style={{
           justifyContent: "space-around",
@@ -32,8 +32,8 @@ export default Benefit = ({ navigation }) => {
             width: 350,
             height: 350,
             borderRadius: 300,
-            borderWidth: 0.5,
-            borderColor: "#F5F5F5",
+            borderWidth: 1.25,
+            borderColor: "blue",
             shadowOpacity: 0.25,
           }}
         >
@@ -44,8 +44,8 @@ export default Benefit = ({ navigation }) => {
               width: 275,
               height: 275,
               borderRadius: 300,
-              borderWidth: 1,
-              borderColor: "#F5F5F5",
+              borderWidth: 1.5,
+              borderColor: "blue",
               shadowOpacity: 0.25,
             }}
           >
@@ -57,7 +57,7 @@ export default Benefit = ({ navigation }) => {
                 height: 200,
                 borderRadius: 100,
                 borderWidth: 2,
-                borderColor: "#F5F5F5",
+                borderColor: "blue",
                 shadowOpacity: 0.25,
               }}
             >
@@ -78,30 +78,37 @@ export default Benefit = ({ navigation }) => {
 
         <Text style={styles.infoText}>
           {`채현님은 기준 소득인정액 이하이므로, 
-          만 65세 이상이 되셨을 때,
+          만 65세 이상이 된다면,
           기초연금 수급자격자입니다!`}
         </Text>
         <TouchableOpacity 
-          style={styles.analyButton}
+          style={{...styles.analyButton, overflow: "hidden", borderRadius: 30}}
           onPress={()=>{
             navigation.navigate("AssetAnalysis");
             setActivePage("AssetAnalysis");
           }}
           >
-          <LinearGradient
-            colors={["#6E64D4", "#5AA9FC"]}
-            start={{ x: 0, y: 0 }}
-            end={{ x: 1, y: 0 }}
-            borderRadius={25}
-            padding={10}
-          >
-            <Text style={{...styles.textColor}}>
-              채현님의 자산 분석 리포트 보러가기
-            </Text>
-          </LinearGradient>
+          <View style={{}}>
+            <LinearGradient
+              colors={["#6E64D4", "#5AA9FC"]}
+              start={{ x: 0, y: 0 }}
+              end={{ x: 1, y: 0 }}
+              // borderRadius={20}
+              // padding={10}
+              // 
+            >
+              <Text style={{
+                  ...styles.textColor,
+                  marginHorizontal: 10, 
+                  marginVertical: 10,
+                }}>
+                채현님의 자산 분석 리포트 보러가기
+              </Text>
+            </LinearGradient>
+          </View>
         </TouchableOpacity>
 
-        <TouchableOpacity 
+        {/* <TouchableOpacity 
           style={styles.analyButton}
           onPress={()=>{
             navigation.navigate("OldPrepPredict");
@@ -118,9 +125,9 @@ export default Benefit = ({ navigation }) => {
               {"채현님의 노후 대비율 예측해보러가기"}
             </Text>
           </LinearGradient>
-        </TouchableOpacity>
+        </TouchableOpacity> */}
 
-        <FontAwesome.Button
+        {/* <FontAwesome.Button
           name="home"
           color="white"
           size={40}
@@ -131,9 +138,9 @@ export default Benefit = ({ navigation }) => {
             setActivePage("Home");
             navigation.navigate("Home");
           }}
-        />
+        /> */}
       </View>
-    </LinearGradient>
+    // </LinearGradient>
   );
 };
 
@@ -148,8 +155,8 @@ const styles = StyleSheet.create({
       width: 3,
       height: 3,
     },
-    padding: 10,
-    marginVertical: 15,
+    // padding: 10,
+    marginVertical: 10,
     alignItems: "center",
   },
   textColor: {
@@ -159,13 +166,9 @@ const styles = StyleSheet.create({
     // fontFamily: "Hahmlet",
     fontWeight: "700",
     fontSize: 23,
-    marginVertical: 20,
+    marginTop: 20,
     marginLeft: 10,
-    // marginHorizontal: 20,
-    // lineHeight: 33,
-    // textAlign: "center",
-    // padding: 20,
-    color: "#FFFFFF",
+    color: "#000",
     shadowOpacity: 0.25,
     shadowOffset: {
       width: 1,

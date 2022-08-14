@@ -14,6 +14,7 @@ import { useHeaderHeight } from '@react-navigation/elements';
 import { BgGradShape } from "../shape";
 import FontAwesome from "@expo/vector-icons/FontAwesome";
 import { useGlobalState } from "../GlobalState/GlobalStates";
+import { LinearGradient } from "expo-linear-gradient";
 
 const OldPrepPredict3 = ({ navigation }) => {
     const [activePage, setActivePage] = useGlobalState("activePage");
@@ -138,7 +139,29 @@ const OldPrepPredict3 = ({ navigation }) => {
                 marginTop: 10,
                 alignItems: 'center', justifyContent: 'center'
             }}>
-                <FontAwesome.Button
+                <TouchableOpacity 
+                    style={{...styleSheet.analyButton, overflow: "hidden", borderRadius: 30}}
+                    onPress={()=>{
+                        navigation.navigate("RetireInvestTop");
+                        setActivePage("RetireInvestTop");
+                    }}>
+                    <View style={{}}>
+                        <LinearGradient
+                            colors={["#6E64D4", "#5AA9FC", ]}
+                            start={{ x: 0, y: 0 }}
+                            end={{ x: 1, y: 0 }}
+                        >
+                            <Text style={{
+                                color: 'white',
+                                marginHorizontal: 30, 
+                                marginVertical: 10,
+                                }}>
+                                퇴직연금 투자 맛보러 가기
+                            </Text>
+                        </LinearGradient>
+                    </View>
+                </TouchableOpacity>
+                {/* <FontAwesome.Button
                     name="rocket"
                     color="white"
                     size={40}
@@ -153,7 +176,7 @@ const OldPrepPredict3 = ({ navigation }) => {
                     }}
                 >
                     풍요로운 미래를 준비하러 가기!
-                </FontAwesome.Button>
+                </FontAwesome.Button> */}
             </View>
         </ScrollView>
     )
@@ -169,7 +192,18 @@ const styleSheet = StyleSheet.create({
         borderRadius: 35,
         backgroundColor: "white",
         alignSelf: "center"
-    }
+    },
+    analyButton: {
+        shadowColor: "#000",
+        shadowOpacity: 0.25,
+        shadowOffset: {
+          width: 3,
+          height: 3,
+        },
+        // padding: 10,
+        marginVertical: 10,
+        alignItems: "center",
+    },
 
 });
 

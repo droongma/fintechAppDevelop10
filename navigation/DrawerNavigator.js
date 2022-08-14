@@ -11,6 +11,9 @@ import {
   OldPrepPredict,
   FinanceProduct,
   NewsScreen,
+  RetireInvestTop,
+  RetireMyInvest,
+  ProductReco,
 } from "../screens";
 import { createDrawerNavigator } from "@react-navigation/drawer";
 import { SettingStackNavigator } from "./SettingStackNavigator";
@@ -86,17 +89,29 @@ const DrawerNavigator = ({ navigation }) => {
       />
 
       <Drawer.Screen
+        name="RetireInvestTop"
+        options={{ title: "RetireInvestTop.js" }}
+        component={RetireInvestTop}
+      />
+
+      <Drawer.Screen
+        name="RetireMyInvest"
+        options={{ title: "RetireMyInvest.js" }}
+        component={RetireMyInvest}
+      />
+
+      <Drawer.Screen
         name="AssetAnalysis"
         options={{ title: "AssetAnalysis.js" }}
         component={AssetAnalysis}
-      />   
+      />
 
       <Drawer.Screen
         name="NewsScreen"
         options={{ title: "NewsScreen.js" }}
         component={NewsScreen}
-      />     
-      
+      />
+
       <Drawer.Screen
         name="NonBenefit"
         options={{ title: "NonBenefit.js" }}
@@ -105,13 +120,13 @@ const DrawerNavigator = ({ navigation }) => {
 
       <Drawer.Screen
         name="OldPrepPredict"
-        options={{ title: "OldPrepPredict.js",  }}
+        options={{ title: "OldPrepPredict.js" }}
         component={OldPrepPredict}
       />
 
       <Drawer.Screen
         name="FinanceProduct"
-        options={{ title: "FinanceProduct.js",  }}
+        options={{ title: "FinanceProduct.js" }}
         component={FinanceProduct}
       />
 
@@ -140,6 +155,12 @@ const DrawerNavigator = ({ navigation }) => {
         }}
         component={AlarmScreen}
       />
+      <Drawer.Screen
+        name="ProductReco"
+        options={{ title: "ProductReco.js" }}
+        component={ProductReco}
+      />
+
       {/* <Drawer.Screen name="Navtest" component={Navtest} /> */}
     </Drawer.Navigator>
   );

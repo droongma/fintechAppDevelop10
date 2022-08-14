@@ -11,6 +11,13 @@ const oldprep3 = require("../assets/images/oldprep3.png");
 const nohu_logo = require("../assets/images/nohu_logo.png");
 const mydata_agree = require("../assets/images/mydata_agree.png");
 const finance_product1 = require("../assets/images/finance_product1.png");
+const invest_logo1 = require("../assets/images/invest_logo1.png");
+const gain_graph = require("../assets/images/gain_graph.png");
+
+const investAd1 = require("../assets/images/investAd1.png");
+const investAd2 = require("../assets/images/investAd2.png");
+const investAd3 = require("../assets/images/investAd3.png");
+const investAd4 = require("../assets/images/investAd4.png");
 
 // Dummy
 const usFlag = require("../assets/images/us-flag.jpg");
@@ -29,6 +36,12 @@ export default {
     nohu_logo,
     mydata_agree,
     finance_product1,
+    invest_logo1,
+    gain_graph,
+    investAd1,
+    investAd2,
+    investAd3,
+    investAd4,
 
     // Dummy
     usFlag,

@@ -6,12 +6,14 @@ import {
     StyleSheet,
     ImageBackground,
     ScrollView,
+    TouchableOpacity,
 } from "react-native";
 import { COLORS, SIZES, FONTS, icons, images } from "../constants"
 import { useHeaderHeight } from '@react-navigation/elements';
 import { BgGradShape } from "../shape";
 import FontAwesome from "@expo/vector-icons/FontAwesome";
 import { useGlobalState } from "../GlobalState/GlobalStates";
+import { LinearGradient } from "expo-linear-gradient";
 
 const OldPrepPredict = ({navigation}) => {
     const [activePage, setActivePage] = useGlobalState("activePage");
@@ -111,7 +113,30 @@ const OldPrepPredict = ({navigation}) => {
             </View>
             <View style={{ marginTop: 10,
                 alignItems: 'center', justifyContent: 'center'}}>
-                <FontAwesome.Button
+                <TouchableOpacity 
+                    style={{...styleSheet.analyButton, overflow: "hidden", borderRadius: 30}}
+                    onPress={()=>{
+                        navigation.navigate("OldPrepPredict2");
+                        setActivePage("OldPrepPredict2");
+                    }}
+                    >
+                    <View style={{}}>
+                        <LinearGradient
+                            colors={["#6E64D4", "#5AA9FC", ]}
+                            start={{ x: 0, y: 0 }}
+                            end={{ x: 1, y: 0 }}
+                        >
+                            <Text style={{
+                                color: 'white',
+                                marginHorizontal: 30, 
+                                marginVertical: 10,
+                                }}>
+                                풍요로운 미래를 준비하러 가기!
+                            </Text>
+                        </LinearGradient>
+                    </View>
+                </TouchableOpacity>
+                {/* <FontAwesome.Button
                     name="search-plus"
                     color="white"
                     size={40}
@@ -125,7 +150,7 @@ const OldPrepPredict = ({navigation}) => {
                     }}
                 >
                     노후대비율 측정해보러 가기!
-                </FontAwesome.Button>
+                </FontAwesome.Button> */}
             </View>
         </ScrollView>
     )
@@ -141,7 +166,18 @@ const styleSheet = StyleSheet.create({
         borderRadius: 35,
         backgroundColor: "white", 
         alignSelf: "center"
-    }
+    },
+    analyButton: {
+        shadowColor: "#000",
+        shadowOpacity: 0.25,
+        shadowOffset: {
+          width: 3,
+          height: 3,
+        },
+        // padding: 10,
+        marginVertical: 10,
+        alignItems: "center",
+    },
    
   });
 

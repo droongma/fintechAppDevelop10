@@ -96,7 +96,7 @@ export function DrawerCustomContent(props) {
               setActivePage("AssetAnalysis");
               props.navigation.navigate("AssetAnalysis");
             }}
-          />    
+          />
 
           <DrawerItem
             label="추천 금융상품"
@@ -122,8 +122,60 @@ export function DrawerCustomContent(props) {
               setActivePage("NewsScreen");
               props.navigation.navigate("NewsScreen");
             }}
-          />   
+          />
 
+          <DrawerItem
+            label="나의 퇴직연금 투자현황"
+            style={
+              activePage === "RetireMyInvest"
+                ? { backgroundColor: "#CBE9AC" }
+                : { backgroundColor: "#ffffff" }
+            }
+            onPress={() => {
+              setActivePage("RetireMyInvest");
+              props.navigation.navigate("RetireMyInvest");
+            }}
+          />
+
+          <DrawerItem
+            label="인기 퇴직연금 투자상품"
+            style={
+              activePage === "RetireInvestTop"
+                ? { backgroundColor: "#CBE9AC" }
+                : { backgroundColor: "#ffffff" }
+            }
+            onPress={() => {
+              setActivePage("RetireInvestTop");
+              props.navigation.navigate("RetireInvestTop");
+            }}
+          />
+
+          <DrawerItem
+            label="노후자금 시뮬레이션"
+            style={
+              activePage === "InfoInput"
+                ? { backgroundColor: "#CBE9AC" }
+                : { backgroundColor: "#ffffff" }
+            }
+            onPress={() => {
+              setActivePage("InfoInput");
+              props.navigation.navigate("InfoInput");
+            }}
+          />
+
+          <DrawerItem
+            label="추천회사 조회"
+            style={
+              activePage === "ProductReco"
+                ? { backgroundColor: "#CBE9AC" }
+                : { backgroundColor: "#ffffff" }
+            }
+            onPress={() => {
+              setActivePage("ProductReco");
+              props.navigation.navigate("ProductReco");
+            }}
+          />
+          
           <DrawerItem
             label="설정"
             style={
@@ -137,18 +189,6 @@ export function DrawerCustomContent(props) {
             }}
           />
 
-          <DrawerItem
-            label="InfoInput.js입니다"
-            style={
-              activePage === "InfoInput"
-                ? { backgroundColor: "#CBE9AC" }
-                : { backgroundColor: "#ffffff" }
-            }
-            onPress={() => {
-              setActivePage("InfoInput");
-              props.navigation.navigate("InfoInput");
-            }}
-          />
 
           {/* <DrawerItem
             label="NonBenefit.js입니다"
@@ -209,7 +249,7 @@ export function DrawerCustomContent(props) {
             onPress={() => {
               // props.navigation.navigate("OldPrepPredict2");
             }}
-          />    
+          />
         </Drawer.Section>
       </DrawerContentScrollView>
     </View>
