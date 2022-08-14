@@ -60,6 +60,7 @@ request(url, function (err, res, html) {
   });
 });
 
+// parameter : 수입, 현재 나이, 일한 기간, 은퇴 예상 나이
 function predictPension(income, age, workPeriod, retirementAge) {
     var pensionJoinPeriod = retirementAge - (age - workPeriod);
     var period = parseInt((pensionJoinPeriod / 5) - 1);
