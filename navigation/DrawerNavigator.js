@@ -11,6 +11,9 @@ import {
   OldPrepPredict,
   FinanceProduct,
   NewsScreen,
+  RetireInvest,
+  RetireInvestTop,
+  RetireMyInvest,
 } from "../screens";
 import { createDrawerNavigator } from "@react-navigation/drawer";
 import { SettingStackNavigator } from "./SettingStackNavigator";
@@ -83,6 +86,18 @@ const DrawerNavigator = ({ navigation }) => {
         name="Benefit"
         options={{ title: "Benefit.js" }}
         component={Benefit}
+      />
+
+      <Drawer.Screen
+        name="RetireInvestTop"
+        options={{ title: "RetireInvestTop.js" }}
+        component={RetireInvestTop}
+      />
+
+      <Drawer.Screen
+        name="RetireMyInvest"
+        options={{ title: "RetireMyInvest.js" }}
+        component={RetireMyInvest}
       />
 
       <Drawer.Screen

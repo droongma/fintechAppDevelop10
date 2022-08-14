@@ -125,6 +125,32 @@ export function DrawerCustomContent(props) {
           />   
 
           <DrawerItem
+            label="나의 퇴직연금 투자현황"
+            style={
+              activePage === "RetireMyInvest"
+                ? { backgroundColor: "#CBE9AC" }
+                : { backgroundColor: "#ffffff" }
+            }
+            onPress={() => {
+              setActivePage("RetireMyInvest");
+              props.navigation.navigate("RetireMyInvest");
+            }}
+          />
+
+          <DrawerItem
+            label="인기 퇴직연금 투자상품"
+            style={
+              activePage === "RetireInvestTop"
+                ? { backgroundColor: "#CBE9AC" }
+                : { backgroundColor: "#ffffff" }
+            }
+            onPress={() => {
+              setActivePage("RetireInvestTop");
+              props.navigation.navigate("RetireInvestTop");
+            }}
+          />
+
+          <DrawerItem
             label="설정"
             style={
               activePage === "Setting"

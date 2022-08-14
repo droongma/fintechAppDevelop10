@@ -14,6 +14,7 @@ import { useHeaderHeight } from '@react-navigation/elements';
 import { BgGradShape } from "../shape";
 import FontAwesome from "@expo/vector-icons/FontAwesome";
 import { useGlobalState } from "../GlobalState/GlobalStates";
+import { LinearGradient } from "expo-linear-gradient";
 
 const OldPrepPredict2 = ({ navigation }) => {
     const [activePage, setActivePage] = useGlobalState("activePage");
@@ -100,7 +101,30 @@ const OldPrepPredict2 = ({ navigation }) => {
                 alignItems: 'center', 
                 justifyContent: 'center',
             }}>
-                <FontAwesome.Button
+                <TouchableOpacity 
+                    style={{...styleSheet.analyButton, overflow: "hidden", borderRadius: 30}}
+                    onPress={()=>{
+                        navigation.navigate("OldPrepPredict3");
+                        setActivePage("OldPrepPredict3");
+                    }}
+                    >
+                    <View style={{}}>
+                        <LinearGradient
+                            colors={["#6E64D4", "#5AA9FC", ]}
+                            start={{ x: 0, y: 0 }}
+                            end={{ x: 1, y: 0 }}
+                        >
+                            <Text style={{
+                                color: 'white',
+                                marginHorizontal: 30, 
+                                marginVertical: 10,
+                                }}>
+                                클릭하여 상세조회하기
+                            </Text>
+                        </LinearGradient>
+                    </View>
+                </TouchableOpacity>
+                {/* <FontAwesome.Button
                     // name="paypal"
                     color="white"
                     size={30}
@@ -115,14 +139,49 @@ const OldPrepPredict2 = ({ navigation }) => {
                     }}
                 >
                     클릭하여 상세조회하기
-                </FontAwesome.Button>
+                </FontAwesome.Button> */}
             </View>
             <View style={{
-                marginTop: 10,
+                marginTop: 5,
                 alignItems: 'center', 
                 justifyContent: 'center',
-            }}>            
-                <FontAwesome.Button
+            }}>
+                <TouchableOpacity 
+                    style={{...styleSheet.analyButton, overflow: "hidden", borderRadius: 30}}
+                    onPress={()=>{
+                        navigation.navigate("FinanceProduct");
+                        setActivePage("FinanceProduct");
+                    }}
+                    >
+                    <View style={{}}>
+                        <LinearGradient
+                            paddingVertical={20}
+                            colors={["#5AA9FC", "#6E64D4", ]}
+                            start={{ x: 0, y: 0 }}
+                            end={{ x: 1, y: 0 }}
+                        >
+                            <Text style={{
+                                color: 'white',
+                                width : SIZES.width * 0.5,
+                                marginHorizontal: 30, 
+                                // marginVertical: 30,
+                                ...FONTS.h2,
+                                }}> 
+                                채현님께 추천하는
+                            </Text>
+                            <Text style={{
+                                color: 'white',
+                                width : SIZES.width * 0.5,
+                                marginHorizontal: 30, 
+                                // marginVertical: 30,
+                                ...FONTS.h2,
+                                }}>
+                                금융상품 보러가기
+                            </Text>
+                        </LinearGradient>
+                    </View>
+                </TouchableOpacity>
+                {/* <FontAwesome.Button
                     name="paypal"
                     color="white"
                     size={40}
@@ -137,14 +196,13 @@ const OldPrepPredict2 = ({ navigation }) => {
                     }}
                 >
                     채현님께 추천하는 금융상품 보러가기
-                </FontAwesome.Button>
+                </FontAwesome.Button> */}
             </View>
         </ScrollView>
     )
 }
 
 const styleSheet = StyleSheet.create({
-
     whiteBox: {
         width: SIZES.width * 0.6,
         height: SIZES.height * 0.4,
@@ -153,7 +211,19 @@ const styleSheet = StyleSheet.create({
         borderRadius: 35,
         backgroundColor: "white",
         alignSelf: "center"
-    }
+    },
+
+    analyButton: {
+        shadowColor: "#000",
+        shadowOpacity: 0.25,
+        shadowOffset: {
+          width: 3,
+          height: 3,
+        },
+        // padding: 10,
+        marginVertical: 10,
+        alignItems: "center",
+    },
 
 });
 
