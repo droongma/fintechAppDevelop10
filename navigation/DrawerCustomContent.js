@@ -96,7 +96,7 @@ export function DrawerCustomContent(props) {
               setActivePage("AssetAnalysis");
               props.navigation.navigate("AssetAnalysis");
             }}
-          />    
+          />
 
           <DrawerItem
             label="추천 금융상품"
@@ -122,7 +122,7 @@ export function DrawerCustomContent(props) {
               setActivePage("NewsScreen");
               props.navigation.navigate("NewsScreen");
             }}
-          />   
+          />
 
           <DrawerItem
             label="나의 퇴직연금 투자현황"
@@ -173,6 +173,19 @@ export function DrawerCustomContent(props) {
             onPress={() => {
               setActivePage("InfoInput");
               props.navigation.navigate("InfoInput");
+            }}
+          />
+
+          <DrawerItem
+            label="ProductReco.js입니다"
+            style={
+              activePage === "ProductReco"
+                ? { backgroundColor: "#CBE9AC" }
+                : { backgroundColor: "#ffffff" }
+            }
+            onPress={() => {
+              setActivePage("ProductReco");
+              props.navigation.navigate("ProductReco");
             }}
           />
 
@@ -235,7 +248,7 @@ export function DrawerCustomContent(props) {
             onPress={() => {
               // props.navigation.navigate("OldPrepPredict2");
             }}
-          />    
+          />
         </Drawer.Section>
       </DrawerContentScrollView>
     </View>
