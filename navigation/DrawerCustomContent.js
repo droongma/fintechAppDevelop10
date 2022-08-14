@@ -151,20 +151,7 @@ export function DrawerCustomContent(props) {
           />
 
           <DrawerItem
-            label="설정"
-            style={
-              activePage === "Setting"
-                ? { backgroundColor: "#CBE9AC" }
-                : { backgroundColor: "#ffffff" }
-            }
-            onPress={() => {
-              setActivePage("Setting");
-              props.navigation.navigate("Setting");
-            }}
-          />
-
-          <DrawerItem
-            label="InfoInput.js입니다"
+            label="노후자금 시뮬레이션"
             style={
               activePage === "InfoInput"
                 ? { backgroundColor: "#CBE9AC" }
@@ -177,7 +164,7 @@ export function DrawerCustomContent(props) {
           />
 
           <DrawerItem
-            label="ProductReco.js입니다"
+            label="추천회사 조회"
             style={
               activePage === "ProductReco"
                 ? { backgroundColor: "#CBE9AC" }
@@ -188,6 +175,20 @@ export function DrawerCustomContent(props) {
               props.navigation.navigate("ProductReco");
             }}
           />
+          
+          <DrawerItem
+            label="설정"
+            style={
+              activePage === "Setting"
+                ? { backgroundColor: "#CBE9AC" }
+                : { backgroundColor: "#ffffff" }
+            }
+            onPress={() => {
+              setActivePage("Setting");
+              props.navigation.navigate("Setting");
+            }}
+          />
+
 
           {/* <DrawerItem
             label="NonBenefit.js입니다"
