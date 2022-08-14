@@ -194,7 +194,7 @@ const styles = StyleSheet.create({
     backgroundColor: "#EFFAFD",
   },
   inputFormat: {
-    height: 10,
+    height: 20,
     margin: 10,
     borderWidth: 1,
     //padding: 10,
