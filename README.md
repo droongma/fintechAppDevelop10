@@ -4,6 +4,15 @@
 ## 어플의 목적
 은퇴를 걱정하는 사람들이 이용하기 편리한 맞춤형 은퇴자산 관리 서비스 제공
 
+## 어플의 개발환경
+- 사용한 프로그래밍 언어 : **React Native(버전 0.68)**
+- 코드 작성에 사용한 에디터 : Visual Studio Code
+- 어플 테스트용 안드로이드 에뮬레이터 : Pixel 2 API 30
+
+## 개발에 사용한 주요 라이브러리
+- **@react-navigation/drawer** : 서랍형(drawer) 메뉴 구현에 사용하는 drawer navigation 라이브러리. **사용자가 직접 원하는 메뉴를 선택하도록 할 때 유용하다.**
+
+- **@react-navigation/stack** : stack navigation 라이브러리. **사용자가 화면 내에서 버튼 등을 눌러 다른 화면으로 이동하려는 상황일 때, 이것을 쓰면 유용하다.**
 ## 어플의 구성
 
 |메뉴 설명 |탐색 메뉴바(drawer navigation) 이미지 |
